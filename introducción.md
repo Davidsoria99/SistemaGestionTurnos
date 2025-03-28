@@ -2,7 +2,8 @@
 
 ## ¿Qué es la programación orientada a objetos?
 
-La programación orientada a objetos (POO) es un paradigma de programación que se basa en la abstracción de datos y comportamiento dentro de "objetos". Estos objetos son instancias de clases que agrupan atributos (estado) y métodos (comportamiento).
+La programación orientada a objetos (POO) es un paradigma de programación que organiza el software en entidades llamadas objetos, que contienen tanto datos como comportamientos.
+Es crucial para construir sistemas eficientes y escalables.
 
 POO es importante porque permite:
 - Reutilizar código
@@ -12,13 +13,13 @@ POO es importante porque permite:
 
 ---
 
-## Los cuatro fundamentos de la POO
+## Ejemplos de los cuatro fundamentos de la POO
 
 ### 1. Abstracción
-**Ejemplo**: Un "Turno" en un hospital representa solo la información necesaria (fecha, hora, paciente), sin detalles internos.
+**Ejemplo**: Un turno en un hospital representa solo la información necesaria (fecha, hora, paciente), sin detalles internos.
 
 ### 2. Encapsulamiento
-**Ejemplo**: Un cajero automático expone una interfaz al usuario, pero oculta cómo maneja internamente las transacciones.
+**Ejemplo**: Un cajero automático solo muestra una interfaz al usuario, pero oculta cómo maneja internamente las transacciones.
 
 ### 3. Herencia
 **Ejemplo**: Una clase `Empleado` puede ser la base para `Médico`, `Enfermero`, etc., que heredan sus propiedades básicas.
