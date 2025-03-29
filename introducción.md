@@ -16,15 +16,19 @@ POO es importante porque permite:
 ## Ejemplos de los cuatro fundamentos de la POO
 
 ### 1. Abstracción
+-Consiste en simplificar la complejidad del mundo real modelando solo los aspectos esenciales relevantes para el sistema.
 **Ejemplo**: Un turno en un hospital representa solo la información necesaria (fecha, hora, paciente), sin detalles internos.
 
 ### 2. Encapsulamiento
+-Es el proceso de ocultar la implementación interna de un objeto y exponer sólo las interfaces públicas.
 **Ejemplo**: Un cajero automático solo muestra una interfaz al usuario, pero oculta cómo maneja internamente las transacciones.
 
 ### 3. Herencia
-**Ejemplo**: Una clase `Empleado` puede ser la base para `Médico`, `Enfermero`, etc., que heredan sus propiedades básicas.
+-Es un mecanismo que permite que un objeto herede propiedades y comportamientos de otro objeto.
+**Ejemplo**: La clase `Empleado` puede ser la base para `Médico`, `Enfermero`, etc., que heredan sus propiedades básicas.
 
 ### 4. Polimorfismo
+-Se refiere a la capacidad de los objetos de una misma jerarquía de clases para responder de manera diferente a un mismo mensaje.
 **Ejemplo**: Un método `imprimirDatos()` puede actuar diferente según se aplique a un `Paciente` o a un `Turno`.
 
 ---
@@ -33,9 +37,9 @@ POO es importante porque permite:
 
 1. El sistema debe permitir registrar pacientes.
 2. El sistema debe permitir agendar turnos.
-3. El sistema debe listar turnos agendados por fecha.
+3. El sistema debe listar turnos agendados por fecha y hora.
 4. El sistema debe cancelar un turno previamente registrado.
-5. El sistema debe enviar notificaciones por correo electrónico.
+5. El sistema debe enviar notificaciones por correo electrónico o apps de mensajeria.
 
 ---
 
@@ -50,7 +54,7 @@ POO es importante porque permite:
 - **Flujo principal de eventos**:
   1. Inicia sesión en el sistema.
   2. Selecciona la opción “Registrar paciente”.
-  3. Completa los datos requeridos (nombre, DNI, contacto, etc.).
+  3. Completa los datos requeridos (nombre, contacto, etc.).
   4. Guarda el registro.
 - **Precondiciones**: El usuario debe estar autenticado.
 - **Postcondiciones**: El paciente queda almacenado en la base de datos.
@@ -73,7 +77,7 @@ POO es importante porque permite:
 ### 📘 Caso de uso 3: Consultar turnos
 
 - **Actor(es) involucrado(s)**: Recepcionista
-- **Descripción breve**: El sistema muestra los turnos agendados en una fecha específica.
+- **Descripción breve**: El sistema muestra los turnos agendados en una fecha y hora específica.
 - **Flujo principal de eventos**:
   1. Selecciona la fecha en el calendario.
   2. El sistema lista todos los turnos programados para ese día.
@@ -85,7 +89,7 @@ POO es importante porque permite:
 ### 📘 Caso de uso 4: Cancelar turno
 
 - **Actor(es) involucrado(s)**: Paciente, Recepcionista
-- **Descripción breve**: Se elimina un turno previamente asignado.
+- **Descripción breve**: Se cancela un turno previamente asignado.
 - **Flujo principal de eventos**:
   1. Se busca el turno por paciente o fecha.
   2. Se selecciona y se confirma la cancelación.
