@@ -17,18 +17,22 @@ POO es importante porque permite:
 
 ### 1. Abstracción
 -Consiste en simplificar la complejidad del mundo real modelando solo los aspectos esenciales relevantes para el sistema.
+
 **Ejemplo**: Un turno en un hospital representa solo la información necesaria (fecha, hora, paciente), sin detalles internos.
 
 ### 2. Encapsulamiento
 -Es el proceso de ocultar la implementación interna de un objeto y exponer sólo las interfaces públicas.
+
 **Ejemplo**: Un cajero automático solo muestra una interfaz al usuario, pero oculta cómo maneja internamente las transacciones.
 
 ### 3. Herencia
 -Es un mecanismo que permite que un objeto herede propiedades y comportamientos de otro objeto.
+
 **Ejemplo**: La clase `Empleado` puede ser la base para `Médico`, `Enfermero`, etc., que heredan sus propiedades básicas.
 
 ### 4. Polimorfismo
 -Se refiere a la capacidad de los objetos de una misma jerarquía de clases para responder de manera diferente a un mismo mensaje.
+
 **Ejemplo**: Un método `imprimirDatos()` puede actuar diferente según se aplique a un `Paciente` o a un `Turno`.
 
 ---
