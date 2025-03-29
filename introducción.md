@@ -109,6 +109,7 @@ POO es importante porque permite:
 
 ## Boceto inicial del diseño de clases
 
-![Diseño de clases](diseño_clases.png)
+![Boceto inicial del diseño de clases](https://github.com/user-attachments/assets/59c3fd4e-bbbe-4435-a837-3fa483259885)
+.png)
 
 🔗 [Ver diseño en línea](https://excalidraw.com/)
