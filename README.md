@@ -4,7 +4,7 @@
 
 **Apellido Nombre**: Soria Jorge David  
 **Materia - Carrera**: Diseño Orientado a Objetos - Tecnicatura Universitaria en Programación de Sistemas  
-**Profesor**: MATIAS ALEJANDRO VELASQUEZ ROJAS  
+**Profesor**: Matias Alejandro Velasquez Rojas  
 **Año**: 2025
 
 ---
