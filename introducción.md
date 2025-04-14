@@ -86,9 +86,9 @@ POO es importante porque permite:
   3. El sistema solicita identificar al paciente. El recepcionista busca por DNI o nombre.
   4. Si el paciente no está registrado, el sistema permite registrarlo (ver Caso de uso 1).
   5. Una vez identificado el paciente, el sistema solicita elegir:
-    - Especialidad médica
-    - Profesional (si ya tiene uno asignado)
-    - Día y horario preferido
+      - Especialidad médica
+      - Profesional (si ya tiene uno asignado)
+      - Día y horario preferido
   6. El sistema muestra los profesionales disponibles según la especialidad y sus horarios libres.
   7. El recepcionista selecciona el profesional y el horario.
   8. El sistema verifica que el turno esté disponible y que no exista superposición con otros turnos asignados.
