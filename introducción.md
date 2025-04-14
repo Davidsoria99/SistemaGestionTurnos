@@ -81,11 +81,29 @@ POO es importante porque permite:
 - **Actor(es) involucrado(s)**: Recepcionista, Paciente
 - **Descripción breve**: Permite asignar un turno entre un paciente y un profesional.
 - **Flujo principal de eventos**:
-  1. El usuario selecciona un paciente registrado.
-  2. Elige un profesional y un horario disponible.
-  3. Confirma la asignación del turno.
-- **Precondiciones**: El paciente debe existir en el sistema.
-- **Postcondiciones**: El turno queda registrado y vinculado al paciente y profesional.
+  1. El paciente solicita un turno, de forma presencial o telefónica, indicando la especialidad que necesita.
+  2. El recepcionista accede al sistema y selecciona la opción "Agendar turno".
+  3. El sistema solicita identificar al paciente. El recepcionista busca por DNI o nombre.
+  4. Si el paciente no está registrado, el sistema permite registrarlo (ver Caso de uso 1).
+  5. Una vez identificado el paciente, el sistema solicita elegir:
+    - Especialidad médica
+    - Profesional (si ya tiene uno asignado)
+    - Día y horario preferido
+  6. El sistema muestra los profesionales disponibles según la especialidad y sus horarios libres.
+  7. El recepcionista selecciona el profesional y el horario.
+  8. El sistema verifica que el turno esté disponible y que no exista superposición con otros turnos asignados.
+  9. Si todo es válido, el recepcionista confirma el turno.
+  10. El sistema registra el turno en la base de datos, relacionando paciente, médico, fecha y hora.
+  11. El sistema genera una notificación o comprobante del turno para el paciente.
+  12. El sistema puede enviar automáticamente un aviso por correo o mensaje al paciente y al médico.
+  11. El sistema muestra un mensaje de confirmación de que el turno fue asignado correctamente.    
+- **Precondiciones**:
+  - El paciente debe existir en el sistema.
+  - Debe existir al menos un médico disponible para la especialidad solicitada.
+  - El recepcionista debe tener acceso autorizado al sistema.
+- **Postcondiciones**:
+  - Se genera un turno asignado a un paciente y un médico con fecha y hora específicas.
+  - Se actualiza la disponibilidad del médico para reflejar ese turno como ocupado.
 
 ---
 
