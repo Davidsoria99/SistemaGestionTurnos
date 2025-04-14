@@ -56,12 +56,23 @@ POO es importante porque permite:
 - **Actor(es) involucrado(s)**: Recepcionista
 - **Descripción breve**: El recepcionista carga los datos de un nuevo paciente en el sistema.
 - **Flujo principal de eventos**:
-  1. Inicia sesión en el sistema.
-  2. Selecciona la opción “Registrar paciente”.
-  3. Completa los datos requeridos (nombre, contacto, etc.).
-  4. Guarda el registro.
-- **Precondiciones**: El usuario debe estar autenticado.
-- **Postcondiciones**: El paciente queda almacenado en la base de datos.
+  1. El recepcionista inicia sesión en el sistema.
+  2. Desde el menú principal, selecciona la opción “Registrar paciente”.
+  3. El sistema muestra un formulario vacío de registro.
+  4. El recepcionista solicita al paciente sus datos personales (nombre completo, DNI, fecha de nacimiento, email, número de teléfono, dirección, etc.).
+  5. El recepcionista completa el formulario con la información proporcionada.
+  6. El sistema valida los campos obligatorios y el formato de los datos (por ejemplo, que el email tenga formato válido, que el DNI no esté duplicado).
+  7. Si hay errores en la validación, el sistema muestra mensajes indicando los campos que deben corregirse.
+  8. Una vez corregidos los errores (si los hubo), el recepcionista confirma el registro.
+  9. El sistema guarda los datos en la base de datos.
+  10. El sistema muestra un mensaje de confirmación del alta del paciente.
+  11. El sistema ofrece la opción de agendar un turno para el paciente recién registrado.
+- **Precondiciones**:
+- 1. El recepcionista debe haber iniciado sesión.
+  2. El paciente no debe estar registrado previamente (el sistema debería verificar duplicados por DNI).
+- **Postcondiciones**:
+  1. El nuevo paciente queda registrado en el sistema con un ID único.
+  2. Sus datos están disponibles para futuros turnos o consultas.
 
 ---
 
