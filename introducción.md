@@ -139,10 +139,22 @@ POO es importante porque permite:
 - **Actor(es) involucrado(s)**: Paciente, Recepcionista
 - **Descripción breve**: Se cancela un turno previamente asignado.
 - **Flujo principal de eventos**:
-  1. Se busca el turno por paciente o fecha.
-  2. Se selecciona y se confirma la cancelación.
-- **Precondiciones**: El turno debe estar registrado.
-- **Postcondiciones**: El turno se elimina del sistema.
+  1. El recepcionista o administrador inicia sesión en el sistema.
+  2. Desde el menú principal, selecciona la opción “Registrar profesional”.
+  3. El sistema muestra un formulario de registro.
+  4. El operador ingresa los datos personales del profesional: nombre completo, DNI, matrícula profesional, especialidad, dirección, teléfono, email, etc.
+  5. El sistema valida los datos ingresados (por ejemplo, que la matrícula no esté duplicada).
+  6. Si hay errores, el sistema muestra mensajes indicando qué campos deben corregirse.
+  7. Una vez corregidos (si los hubo), el operador confirma el registro.
+  8. El sistema guarda al nuevo profesional en la base de datos.
+  9. El sistema asigna un ID único al profesional.
+  10. Se genera una confirmación visual y se ofrece la opción de cargar sus horarios de atención.
+- **Precondiciones**:
+  - El operador debe estar autenticado con permisos para realizar esta acción.
+  - El profesional no debe estar registrado previamente (verificación por matrícula o DNI).
+- **Postcondiciones**:
+  - El profesional queda registrado y disponible para asignación de turnos.
+  - Sus datos quedan almacenados y pueden ser editados en el futuro.
 
 ---
 
@@ -151,12 +163,25 @@ POO es importante porque permite:
 - **Actor(es) involucrado(s)**: Sistema
 - **Descripción breve**: El sistema envía una notificación automática cuando se agenda o cancela un turno.
 - **Flujo principal de eventos**:
-  1. Se agenda o cancela un turno.
-  2. El sistema detecta el evento.
-  3. Genera y envía un correo al paciente.
-- **Precondiciones**: El paciente debe tener un email registrado.
-- **Postcondiciones**: El paciente recibe la notificación correspondiente.
-  
+  1. El actor (recepcionista o profesional) accede al sistema con sus credenciales.
+  2. Desde el menú principal, selecciona la opción “Consultar agenda”.
+  3. El sistema solicita los filtros de búsqueda: profesional, fecha o rango de fechas.
+  4. El actor elige el profesional (puede ser él mismo si es médico) y la fecha deseada.
+  5. El sistema consulta la base de datos y muestra la agenda correspondiente:
+      - Horarios disponibles y ocupados
+      - Nombre del paciente asignado
+      - Especialidad del turno (si aplica)
+      - Estado del turno (activo, cancelado, finalizado)
+  6. El actor puede cambiar de fecha o profesional desde la misma vista para navegar por la agenda.
+  7. El sistema permite imprimir o exportar la agenda.
+  8. Se muestra una opción para volver al menú principal.
+- **Precondiciones**:
+  - El actor debe estar autenticado en el sistema.
+  - Debe existir al menos un turno registrado para la fecha o profesional seleccionado (si no hay, se muestra una agenda vacía).
+- **Postcondiciones**: 
+  - Se muestra la agenda solicitada en pantalla.
+  - El actor puede acceder rápidamente a los detalles de cada turno si necesita consultar o modificar.
+    
 ---
 
 ## Boceto inicial del diseño de clases
