@@ -112,10 +112,25 @@ POO es importante porque permite:
 - **Actor(es) involucrado(s)**: Recepcionista
 - **Descripción breve**: El sistema muestra los turnos agendados en una fecha y hora específica.
 - **Flujo principal de eventos**:
-  1. Selecciona la fecha en el calendario.
-  2. El sistema lista todos los turnos programados para ese día.
-- **Precondiciones**: El sistema debe contener al menos un turno agendado.
-- **Postcondiciones**: Se muestra la información solicitada.
+  1. El paciente solicita la cancelación del turno, de forma presencial o telefónica.
+  2. El recepcionista accede al sistema y selecciona la opción “Cancelar turno”.
+  3. El sistema solicita buscar al paciente (por nombre o DNI) o directamente buscar por fecha y médico.
+  4. El recepcionista localiza el turno en la agenda del sistema.
+  5. El sistema muestra los detalles del turno (paciente, médico, fecha, hora, motivo, etc.).
+  6. El recepcionista confirma la intención de cancelar el turno.
+  7. El sistema solicita una justificación de la cancelación (opcional).
+  8. El sistema verifica si la cancelación está permitida (por ejemplo, no se permite cancelar con menos de X horas de anticipación, salvo por excepción).
+  9. Si está permitido, el turno se desmarca como asignado y se libera el horario correspondiente del médico.
+  10. El sistema registra la cancelación y actualiza la base de datos.
+  11.Se genera una notificación automática para el paciente y el médico, indicando que el turno ha sido cancelado.
+  12. El sistema muestra un mensaje confirmando la operación.
+- **Precondiciones**:
+  - El turno debe haber sido asignado previamente.
+  - El recepcionista debe estar autenticado en el sistema.
+- **Postcondiciones**:
+  - El turno es eliminado o marcado como cancelado.
+  - El horario queda libre para reasignación.
+  - Queda un registro histórico de la cancelación.
 
 ---
 
