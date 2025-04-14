@@ -122,7 +122,7 @@ POO es importante porque permite:
   8. El sistema verifica si la cancelación está permitida (por ejemplo, no se permite cancelar con menos de X horas de anticipación, salvo por excepción).
   9. Si está permitido, el turno se desmarca como asignado y se libera el horario correspondiente del médico.
   10. El sistema registra la cancelación y actualiza la base de datos.
-  11.Se genera una notificación automática para el paciente y el médico, indicando que el turno ha sido cancelado.
+  11. Se genera una notificación automática para el paciente y el médico, indicando que el turno ha sido cancelado.
   12. El sistema muestra un mensaje confirmando la operación.
 - **Precondiciones**:
   - El turno debe haber sido asignado previamente.
