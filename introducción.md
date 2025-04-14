@@ -96,7 +96,7 @@ POO es importante porque permite:
   10. El sistema registra el turno en la base de datos, relacionando paciente, médico, fecha y hora.
   11. El sistema genera una notificación o comprobante del turno para el paciente.
   12. El sistema puede enviar automáticamente un aviso por correo o mensaje al paciente y al médico.
-  11. El sistema muestra un mensaje de confirmación de que el turno fue asignado correctamente.    
+  13. El sistema muestra un mensaje de confirmación de que el turno fue asignado correctamente.    
 - **Precondiciones**:
   - El paciente debe existir en el sistema.
   - Debe existir al menos un médico disponible para la especialidad solicitada.
