@@ -39,7 +39,7 @@
 ### Escenario de Caso de Uso 2
 
 - **Nombre del caso de uso:** Confirmar Turno  
-- **ID Única:** CU-003  
+- **ID Única:** CU-002  
 - **Área:** Gestión de Turnos / Panel Médico  
 - **Actor(es):** Médico  
 - **Descripción:** El médico accede al sistema y confirma los turnos pendientes que tiene asignados.  
@@ -76,7 +76,7 @@
 ### Escenario de Caso de Uso 3
 
 - **Nombre del caso de uso:** Cancelar Turno  
-- **ID Única:** CU-002  
+- **ID Única:** CU-003  
 - **Área:** Gestión de Turnos  
 - **Actor(es):** Paciente  
 - **Descripción:** Permite al paciente cancelar un turno previamente solicitado antes de la fecha del mismo.  
