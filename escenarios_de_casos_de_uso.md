@@ -34,3 +34,41 @@
 - **Prioridad:** Alta  
 - **Riesgo:** Medio
 
+---
+
+### Escenario de Caso de Uso 2
+
+- **Nombre del caso de uso:** Cancelar Turno  
+- **ID Única:** CU-002  
+- **Área:** Gestión de Turnos  
+- **Actor(es):** Paciente  
+- **Descripción:** Permite al paciente cancelar un turno previamente solicitado antes de la fecha del mismo.  
+- **Activar Evento:** El paciente accede al sistema y selecciona un turno que desea cancelar.  
+- **Tipo de señal:** Externa (iniciada por el paciente).  
+- **Pasos desempeñados (ruta principal):**
+  1. El paciente accede al sistema.  
+  2. Se dirige a la sección "Mis turnos".  
+  3. Visualiza la lista de turnos asignados.  
+  4. Selecciona el turno que desea cancelar.  
+  5. El sistema solicita confirmación.  
+  6. El paciente confirma la cancelación.  
+  7. El sistema cambia el estado del turno a “cancelado”.  
+  8. El sistema actualiza el historial del paciente.  
+- **Precondiciones:**
+  - El paciente debe tener un turno previamente asignado.  
+  - El turno debe estar vigente (no pasado).  
+- **Poscondiciones:**
+  - El turno queda registrado como “cancelado”.  
+  - La fecha y hora quedan disponibles nuevamente para otros pacientes.  
+- **Suposiciones:**
+  - El paciente puede acceder al sistema y tiene permisos para cancelar.  
+  - El turno aún no fue confirmado por el médico o el plazo de cancelación no expiró.  
+- **Reunir requerimientos:**
+  - El sistema debe ofrecer una forma clara de cancelar turnos.  
+  - Debe guardar el estado de cancelación en el historial del paciente.  
+- **Aspectos sobresalientes:**
+  - ¿Hay límite de tiempo antes del cual se puede cancelar?  
+  - ¿Se debe notificar al médico?  
+- **Prioridad:** Alta  
+- **Riesgo:** Bajo
+
