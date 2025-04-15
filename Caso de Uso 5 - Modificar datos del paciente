@@ -1,0 +1,36 @@
+### 📘 Escenario de Caso de Uso 5
+
+- **Nombre del caso de uso:** Modificar datos del paciente  
+- **ID Única:** CU-005  
+- **Área:** Administración de Pacientes  
+- **Actor(es):** Personal administrativo  
+- **Descripción:** El personal administrativo accede a la ficha de un paciente registrado y actualiza su información de contacto u otros datos personales.  
+- **Activar Evento:** El personal administrativo busca un paciente registrado y elige la opción “Modificar”.  
+- **Tipo de señal:** Externa (acción del personal administrativo).  
+- **Pasos desempeñados (ruta principal):**
+  1. El personal administrativo accede al sistema.  
+  2. Selecciona el módulo “Pacientes”.  
+  3. Utiliza la función de búsqueda para localizar al paciente.  
+  4. Selecciona la ficha del paciente.  
+  5. Hace clic en “Modificar datos”.  
+  6. Actualiza la información deseada (teléfono, correo electrónico, etc.).  
+  7. El sistema valida los datos ingresados.  
+  8. El usuario confirma la modificación.  
+  9. El sistema guarda los cambios y muestra un mensaje de éxito.  
+- **Precondiciones:**
+  - El paciente debe estar registrado.  
+  - El usuario debe tener permisos para modificar información.  
+- **Poscondiciones:**
+  - La ficha del paciente queda actualizada.  
+  - Se registra un log de la modificación para trazabilidad.  
+- **Suposiciones:**
+  - La nueva información es válida y necesaria.  
+  - Se mantiene un historial de cambios si fuera requerido.  
+- **Reunir requerimientos:**
+  - Validación de campos editables.  
+  - Control de acceso a funciones de edición.  
+- **Aspectos sobresalientes:**
+  - ¿Se debe notificar al paciente sobre los cambios?  
+  - ¿Hay restricciones sobre qué campos pueden modificarse?  
+- **Prioridad:** Media  
+- **Riesgo:** Bajo
