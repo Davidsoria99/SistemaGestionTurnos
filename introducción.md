@@ -112,59 +112,8 @@ POO es importante porque permite:
 - **Actor(es) involucrado(s)**: Recepcionista
 - **Descripción breve**: El sistema muestra los turnos agendados en una fecha y hora específica.
 - **Flujo principal de eventos**:
-  1. El paciente solicita la cancelación del turno, de forma presencial o telefónica.
-  2. El recepcionista accede al sistema y selecciona la opción “Cancelar turno”.
-  3. El sistema solicita buscar al paciente (por nombre o DNI) o directamente buscar por fecha y médico.
-  4. El recepcionista localiza el turno en la agenda del sistema.
-  5. El sistema muestra los detalles del turno (paciente, médico, fecha, hora, motivo, etc.).
-  6. El recepcionista confirma la intención de cancelar el turno.
-  7. El sistema solicita una justificación de la cancelación (opcional).
-  8. El sistema verifica si la cancelación está permitida (por ejemplo, no se permite cancelar con menos de X horas de anticipación, salvo por excepción).
-  9. Si está permitido, el turno se desmarca como asignado y se libera el horario correspondiente del médico.
-  10. El sistema registra la cancelación y actualiza la base de datos.
-  11. Se genera una notificación automática para el paciente y el médico, indicando que el turno ha sido cancelado.
-  12. El sistema muestra un mensaje confirmando la operación.
-- **Precondiciones**:
-  - El turno debe haber sido asignado previamente.
-  - El recepcionista debe estar autenticado en el sistema.
-- **Postcondiciones**:
-  - El turno es eliminado o marcado como cancelado.
-  - El horario queda libre para reasignación.
-  - Queda un registro histórico de la cancelación.
-
----
-
-### 📘 Caso de uso 4: Cancelar turno
-
-- **Actor(es) involucrado(s)**: Paciente, Recepcionista
-- **Descripción breve**: Se cancela un turno previamente asignado.
-- **Flujo principal de eventos**:
-  1. El recepcionista o administrador inicia sesión en el sistema.
-  2. Desde el menú principal, selecciona la opción “Registrar profesional”.
-  3. El sistema muestra un formulario de registro.
-  4. El operador ingresa los datos personales del profesional: nombre completo, DNI, matrícula profesional, especialidad, dirección, teléfono, email, etc.
-  5. El sistema valida los datos ingresados (por ejemplo, que la matrícula no esté duplicada).
-  6. Si hay errores, el sistema muestra mensajes indicando qué campos deben corregirse.
-  7. Una vez corregidos (si los hubo), el operador confirma el registro.
-  8. El sistema guarda al nuevo profesional en la base de datos.
-  9. El sistema asigna un ID único al profesional.
-  10. Se genera una confirmación visual y se ofrece la opción de cargar sus horarios de atención.
-- **Precondiciones**:
-  - El operador debe estar autenticado con permisos para realizar esta acción.
-  - El profesional no debe estar registrado previamente (verificación por matrícula o DNI).
-- **Postcondiciones**:
-  - El profesional queda registrado y disponible para asignación de turnos.
-  - Sus datos quedan almacenados y pueden ser editados en el futuro.
-
----
-
-### 📘 Caso de uso 5: Enviar notificación por email
-
-- **Actor(es) involucrado(s)**: Sistema
-- **Descripción breve**: El sistema envía una notificación automática cuando se agenda o cancela un turno.
-- **Flujo principal de eventos**:
-  1. El actor (recepcionista o profesional) accede al sistema con sus credenciales.
-  2. Desde el menú principal, selecciona la opción “Consultar agenda”.
+  1. El actor (recepcionista) accede al sistema con sus credenciales.
+  2. Desde el menú principal, selecciona la opción "Mis turnos", luego "Consultar agenda".
   3. El sistema solicita los filtros de búsqueda: profesional, fecha o rango de fechas.
   4. El actor elige el profesional (puede ser él mismo si es médico) y la fecha deseada.
   5. El sistema consulta la base de datos y muestra la agenda correspondiente:
@@ -176,11 +125,54 @@ POO es importante porque permite:
   7. El sistema permite imprimir o exportar la agenda.
   8. Se muestra una opción para volver al menú principal.
 - **Precondiciones**:
-  - El actor debe estar autenticado en el sistema.
-  - Debe existir al menos un turno registrado para la fecha o profesional seleccionado (si no hay, se muestra una agenda vacía).
+  - El sistema debe contener al menos un turno agendado.
+- **Postcondiciones**:
+  - Se muestra la información solicitada.
+
+---
+
+### 📘 Caso de uso 4: Cancelar turno
+
+- **Actor(es) involucrado(s)**: Paciente, Recepcionista
+- **Descripción breve**: Se cancela un turno previamente asignado.
+- **Flujo principal de eventos**:
+  1. El actor (paciente o recepcionista) inicia sesión en el sistema con sus credenciales.
+  2. Desde el menú principal, selecciona la opción "Mis turnos", luego "Cancelar turno".
+  3. El sistema muestra una lista de los turnos que tiene agendados el paciente.
+  4. El paciente selecciona el turno que desea cancelar.
+  5. El sistema muestra los detalles del turno seleccionado y solicita confirmación para cancelarlo.
+  6. El paciente o recepcionista confirma la cancelación.
+  7. El sistema actualiza el estado del turno en la base de datos a “cancelado”.
+  8. El sistema libera ese turno para que pueda ser tomado por otro paciente.
+  9. Se muestra un mensaje de confirmación de la cancelación al usuario.
+- **Precondiciones**:
+  - El paciente debe tener un turno previamente asignado.  
+  - El turno debe estar vigente (no pasado).
+- **Postcondiciones**:
+  - El turno queda registrado como “cancelado”.  
+  - La fecha y hora quedan disponibles nuevamente para otros pacientes.
+
+---
+
+### 📘 Caso de uso 5: Enviar notificación por email
+
+- **Actor(es) involucrado(s)**: Sistema
+- **Descripción breve**: El sistema envía una notificación automática cuando se agenda o cancela un turno.
+- **Flujo principal de eventos**:
+  1. El sistema detecta un evento relevante que requiere notificación (por ejemplo: confirmación de turno, recordatorio, cancelación, modificación).
+  2. El sistema obtiene los datos del paciente destinatario (nombre, email, tipo de turno, fecha, etc.).
+  3. Se genera automáticamente el contenido del correo según el tipo de notificación.
+  4. El sistema establece conexión con el servidor de correo configurado.
+  5. Se envía el email al destinatario.
+  6. El sistema registra el envío en la base de datos con estado "enviado" y la fecha/hora.
+  7. Si ocurre un error en el envío, el sistema:
+      - Lo registra como "fallido"
+      - Notifica al administrador del sistema para su seguimiento.
+  8. El usuario (si corresponde) recibe confirmación del envío (en pantalla o como mensaje de estado).
+- **Precondiciones**:
+  - El paciente debe tener un email registrado.
 - **Postcondiciones**: 
-  - Se muestra la agenda solicitada en pantalla.
-  - El actor puede acceder rápidamente a los detalles de cada turno si necesita consultar o modificar.
+  - El paciente recibe la notificación correspondiente.
     
 ---
 
