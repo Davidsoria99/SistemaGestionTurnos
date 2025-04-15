@@ -18,3 +18,4 @@ El propósito de la aplicación es optimizar la programación de turnos médicos
 ## Diagramas y Diseños
 
 - [Anexos](anexos.md)
+- [Diagramas UML](diagrmasUML.md)
