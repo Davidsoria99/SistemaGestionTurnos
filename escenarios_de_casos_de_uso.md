@@ -109,3 +109,80 @@
 - **Prioridad:** Alta  
 - **Riesgo:** Bajo
 
+---
+
+### Escenario de Caso de Uso 4
+
+- **Nombre del caso de uso:** Registrar un nuevo paciente  
+- **ID Única:** CU-004  
+- **Área:** Administración de Pacientes  
+- **Actor(es):** Personal administrativo  
+- **Descripción:** El personal administrativo registra un nuevo paciente en el sistema con todos sus datos personales y de contacto.  
+- **Activar Evento:** El personal administrativo accede al módulo de pacientes y selecciona “Registrar nuevo”.  
+- **Tipo de señal:** Externa (acción del personal administrativo).  
+- **Pasos desempeñados (ruta principal):**
+  1. El personal administrativo accede al sistema.  
+  2. Selecciona el módulo “Pacientes”.  
+  3. Hace clic en “Registrar nuevo paciente”.  
+  4. Completa el formulario con los datos personales (nombre, DNI, fecha de nacimiento).  
+  5. Agrega información de contacto (teléfono, email).  
+  6. El sistema valida los datos ingresados.  
+  7. El personal confirma el registro.  
+  8. El sistema crea una nueva ficha del paciente y muestra un mensaje de éxito.  
+- **Precondiciones:**
+  - El usuario debe tener permisos administrativos.  
+  - El paciente no debe estar ya registrado.  
+- **Poscondiciones:**
+  - El paciente queda registrado en el sistema.  
+  - Se crea automáticamente su historial clínico vacío.  
+- **Suposiciones:**
+  - Los datos ingresados son correctos y están completos.  
+  - El sistema valida duplicados por DNI.  
+- **Reunir requerimientos:**
+  - Interfaz clara para registrar pacientes.  
+  - Verificación automática de duplicados.  
+- **Aspectos sobresalientes:**
+  - ¿Se puede editar la información una vez guardada?  
+  - ¿Qué campos son obligatorios y cuáles opcionales?  
+- **Prioridad:** Media  
+- **Riesgo:** Bajo
+
+---
+
+### Escenario de Caso de Uso 5
+
+- **Nombre del caso de uso:** Modificar datos del paciente  
+- **ID Única:** CU-005  
+- **Área:** Administración de Pacientes  
+- **Actor(es):** Personal administrativo  
+- **Descripción:** El personal administrativo accede a la ficha de un paciente registrado y actualiza su información de contacto u otros datos personales.  
+- **Activar Evento:** El personal administrativo busca un paciente registrado y elige la opción “Modificar”.  
+- **Tipo de señal:** Externa (acción del personal administrativo).  
+- **Pasos desempeñados (ruta principal):**
+  1. El personal administrativo accede al sistema.  
+  2. Selecciona el módulo “Pacientes”.  
+  3. Utiliza la función de búsqueda para localizar al paciente.  
+  4. Selecciona la ficha del paciente.  
+  5. Hace clic en “Modificar datos”.  
+  6. Actualiza la información deseada (teléfono, correo electrónico, etc.).  
+  7. El sistema valida los datos ingresados.  
+  8. El usuario confirma la modificación.  
+  9. El sistema guarda los cambios y muestra un mensaje de éxito.  
+- **Precondiciones:**
+  - El paciente debe estar registrado.  
+  - El usuario debe tener permisos para modificar información.  
+- **Poscondiciones:**
+  - La ficha del paciente queda actualizada.  
+  - Se registra un log de la modificación para trazabilidad.  
+- **Suposiciones:**
+  - La nueva información es válida y necesaria.  
+  - Se mantiene un historial de cambios si fuera requerido.  
+- **Reunir requerimientos:**
+  - Validación de campos editables.  
+  - Control de acceso a funciones de edición.  
+- **Aspectos sobresalientes:**
+  - ¿Se debe notificar al paciente sobre los cambios?  
+  - ¿Hay restricciones sobre qué campos pueden modificarse?  
+- **Prioridad:** Media  
+- **Riesgo:** Bajo
+
