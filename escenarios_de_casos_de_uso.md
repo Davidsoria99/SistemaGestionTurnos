@@ -1,4 +1,4 @@
-### Escenario de Caso de Uso 1
+### 📘 Escenario de Caso de Uso 1
 
 - **Nombre del caso de uso:** Solicitar Turno  
 - **ID Única:** CU-001  
@@ -36,7 +36,7 @@
 
 ---
 
-### Escenario de Caso de Uso 2
+### 📘 Escenario de Caso de Uso 2
 
 - **Nombre del caso de uso:** Confirmar Turno  
 - **ID Única:** CU-002  
@@ -73,7 +73,7 @@
 
 ---
 
-### Escenario de Caso de Uso 3
+### 📘 Escenario de Caso de Uso 3
 
 - **Nombre del caso de uso:** Cancelar Turno  
 - **ID Única:** CU-003  
@@ -111,7 +111,7 @@
 
 ---
 
-### Escenario de Caso de Uso 4
+### 📘 Escenario de Caso de Uso 4
 
 - **Nombre del caso de uso:** Registrar un nuevo paciente  
 - **ID Única:** CU-004  
@@ -149,7 +149,7 @@
 
 ---
 
-### Escenario de Caso de Uso 5
+### 📘 Escenario de Caso de Uso 5
 
 - **Nombre del caso de uso:** Modificar datos del paciente  
 - **ID Única:** CU-005  
