@@ -38,6 +38,43 @@
 
 ### Escenario de Caso de Uso 2
 
+- **Nombre del caso de uso:** Confirmar Turno  
+- **ID Única:** CU-003  
+- **Área:** Gestión de Turnos / Panel Médico  
+- **Actor(es):** Médico  
+- **Descripción:** El médico accede al sistema y confirma los turnos pendientes que tiene asignados.  
+- **Activar Evento:** El médico inicia sesión en el sistema y accede a su agenda.  
+- **Tipo de señal:** Externa (acción del médico).  
+- **Pasos desempeñados (ruta principal):**
+  1. El médico accede al sistema con sus credenciales.  
+  2. Selecciona la opción “Ver agenda de turnos”.  
+  3. El sistema muestra la lista de turnos asignados.  
+  4. El médico revisa los turnos pendientes.  
+  5. Selecciona un turno y hace clic en “Confirmar”.  
+  6. El sistema actualiza el estado del turno a “confirmado”.  
+  7. El paciente es notificado de la confirmación.  
+- **Precondiciones:**
+  - El turno debe estar previamente asignado a ese médico.  
+  - El médico debe tener acceso al sistema.  
+- **Poscondiciones:**
+  - El estado del turno cambia a “confirmado”.  
+  - El paciente puede ver la confirmación en su panel.  
+- **Suposiciones:**
+  - El médico tiene turnos pendientes que requieren confirmación.  
+  - El sistema permite la modificación del estado del turno.  
+- **Reunir requerimientos:**
+  - El sistema debe permitir la confirmación individual de turnos.  
+  - Debe notificar automáticamente al paciente.  
+- **Aspectos sobresalientes:**
+  - ¿Se puede confirmar masivamente más de un turno?  
+  - ¿Qué sucede si el médico no confirma a tiempo?  
+- **Prioridad:** Alta  
+- **Riesgo:** Medio
+
+---
+
+### Escenario de Caso de Uso 3
+
 - **Nombre del caso de uso:** Cancelar Turno  
 - **ID Única:** CU-002  
 - **Área:** Gestión de Turnos  
