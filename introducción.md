@@ -154,7 +154,7 @@ POO es importante porque permite:
 
 ---
 
-### 📘 Caso de uso 5: Enviar notificación por email
+### 📘 Caso de uso 5: Enviar notificación
 
 - **Actor(es) involucrado(s)**: Sistema
 - **Descripción breve**: El sistema envía una notificación automática cuando se agenda o cancela un turno.
