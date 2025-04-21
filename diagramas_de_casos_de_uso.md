@@ -1,7 +1,7 @@
 - ### Caso de uso 1: Registrar paciente
   Caso de registro de un nuevo pacinete
   ![Diagrama de Casos de Uso 1 Registrar paciente](https://github.com/user-attachments/assets/912d2505-523f-4964-943e-3a872a0f105e)
-*[Diagrama de Casos de Uso 1 Registrar paciente](https://drive.google.com/file/d/10r80BdStmndjPXYGcTLPeU7cxZ_JdOHq/view?usp=sharing)
+* [Diagrama de Casos de Uso 1 Registrar paciente](https://drive.google.com/file/d/10r80BdStmndjPXYGcTLPeU7cxZ_JdOHq/view?usp=sharing)
 
 - ### Caso de uso 2: Agendar turno
   Asignación de turno médico a un paciente
