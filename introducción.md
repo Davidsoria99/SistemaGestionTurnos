@@ -180,4 +180,4 @@ POO es importante porque permite:
 
 ![Boceto inicial del diseño de clases](https://github.com/user-attachments/assets/0302a2d2-520b-45d3-bdfb-b5b53ec9e684)
 
-🔗 [Ver diseño en línea](https://www.canva.com/design/DAGfZdsR-3I/9b2ppf3IxeTbV9T1gSPsUg/edit?utm_content=DAGfZdsR-3I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+🔗 [Ver diseño en línea](https://drive.google.com/file/d/1n5XCmamQ4S3HFBqjyABm8DEjAtyjJtJ8/view?usp=sharing)
