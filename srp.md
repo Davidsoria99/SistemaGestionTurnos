@@ -7,3 +7,6 @@ Al aplicar este principio:
 - El código es más claro y más fácil de testear.
 - Cada clase se enfoca en hacer bien una sola cosa.
 - El mantenimiento del sistema se vuelve más sencillo y menos propenso a errores.
+---
+## Motivación
+
