@@ -30,4 +30,5 @@ Si esa persona tuviera que:
 Probablemente cometería errores, se saturaría y las tareas no se harían bien. En cambio, si repartiera tareas con por ejemplo un/a secretario/a, el sistema es más eficiente y confiable.
 
 Del mismo modo, en el sistema digital, lo mejor seria generar clases especificas para que en cada cambio notener que modificar la clase Recepcionista.
+
 ---
