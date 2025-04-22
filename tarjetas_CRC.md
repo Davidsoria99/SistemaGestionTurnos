@@ -18,7 +18,7 @@ Las tarjetas CRC (Clase, Responsabilidad, Colaboración) es una herramienta util
 
  ![CRC1](https://github.com/user-attachments/assets/c66694b3-a4d1-48c9-8545-c74a4ac54a7d)
  ---
- - ### Tarjeta CRC: Agenda
+- ### Tarjeta CRC: Agenda
 - **Nombre de la Clase:** Agenda
 
 - **Superclase:** (Ninguna)
@@ -35,3 +35,53 @@ Las tarjetas CRC (Clase, Responsabilidad, Colaboración) es una herramienta util
 
 ![CRC2](https://github.com/user-attachments/assets/638f9b5b-61ad-4c6c-864c-6b5d75d8672b)
 ---
+- ### Tarjeta CRC: Turno
+- **Nombre de la Clase:** Turno
+
+- **Superclase:** (Ninguna)
+
+- **Subclase:** (Ninguna)
+
+- **Responsabilidades:** Almacenar los datos de la cita médica, Mostrar detalles del turno, Permitir reprogramación o anulación.
+
+- **Colaboradores:** Agenda, Paciente, Médico, Recepcionista.
+
+- **Pensamiento del objeto:** Represento una cita programada entre un paciente y un médico. Sé cuándo, dónde y con quién se realiza el encuentro. Puedo ser confirmado, cancelado o modificado si es necesario.
+
+- **Propiedad:** fecha, hora, estado, motivo, observaciones, idPaciente, idMedico.
+
+![CRC3](https://github.com/user-attachments/assets/0e101105-8d51-4bb2-ba4d-cba8eed849b7)
+---
+- ### Tarjeta CRC: Paciente
+- **Nombre de la Clase:** Paciente
+
+- **Superclase:** Persona
+
+- **Subclase:** (Ninguna)
+
+- **Responsabilidades:** Solicitar un turno, Consultar sus turnos programados, Cancelar un turno, Actualizar sus datos personales, Ver el historial de sus consultas.
+
+- **Colaboradores:** Agenda, Turno, Médico, Recepcionista.
+
+- **Pensamiento del objeto:** Sé qué especialista necesito y guardo mis datos personales. Quiero saber cuándo y con quién tengo turno. Aviso si no puedo asistir. Mis datos pueden cambiar. También me interesa ver mi historial de turnos.
+
+- **Propiedad:** nombre, apellido, fechaNacimiento, DNI, telefono, email, idPaciente, idMedico.
+
+![CRC4](https://github.com/user-attachments/assets/6faaa324-0d2c-46b2-a867-aad2255676ae)
+---
+- ### Tarjeta CRC: Recepcionista
+- **Nombre de la Clase:** Recepcionista
+
+- **Superclase:** Persona
+
+- **Subclase:** (Ninguna)
+
+- **Responsabilidades:** Registrar pacientes nuevos, Agendar turnos a solicitud de pacientes, Cancelar turnos cuando se solicite.
+
+- **Colaboradores:** Paciente, Turno, Agenda, Médico.
+
+- **Pensamiento del objeto:** Soy quien gestiona el ingreso y administración de los pacientes. Me encargo de registrar nuevos pacientes, programar y cancelar turnos, y mantener actualizada la agenda. Brindo asistencia básica a médicos y pacientes sobre el uso del sistema.
+
+- **Propiedad:** idPaciente, idMedico, nombre, apellido, DNI, email, telefono.
+
+![CRC5](https://github.com/user-attachments/assets/5f3fd80a-fdcb-413f-98e2-b8cb2ee929df)
