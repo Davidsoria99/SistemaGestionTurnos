@@ -47,6 +47,9 @@ Media
 ### Riesgo:
 Bajo
 
+![ESC 1](https://github.com/user-attachments/assets/0250dc12-c8ab-4e2a-a33f-50b62a815138)
+
+
 * [Registrar paciente: Registro exitoso de nuevo paciente](https://drive.google.com/file/d/1n-REjpnBQGjxBw0wlTqkmhAAZClYWyFV/view?usp=sharing)
 ---
 ## Agendar turnos: Turno agendado exitosamente
@@ -100,6 +103,8 @@ Alta
 ### Riesgo:
 Medio
 
+![ESC 2](https://github.com/user-attachments/assets/9f98fde5-c92d-40da-bc85-1f79b224cbb5)
+
 * [Agendar turnos: Turno agendado exitosamente](https://drive.google.com/file/d/10z9Xa16iEWLl0yR-7WBe7_o61Tgi3ak4/view?usp=sharing)
 ---
 ## Consultar turnos: Correcta consulta de turnos
@@ -146,6 +151,8 @@ Media
 
 ### Riesgo:
 Bajo
+
+![ESC 3](https://github.com/user-attachments/assets/87b733e1-a1e5-43bf-b726-0064f1349f80)
 
 * [Consultar turnos: Correcta consulta de turnos](https://drive.google.com/file/d/1vtU10rtQjH3yAkoneho9cRf5hPVfbuuB/view?usp=sharing)
 ---
@@ -200,6 +207,8 @@ Alta
 ### Riesgo:
 Medio
 
+![ESC 4](https://github.com/user-attachments/assets/1442eadd-49ec-45ea-bde7-039e827be8f4)
+
 * [Cancelar turnos: Turno cancelado con éxito](https://drive.google.com/file/d/1hKlgNY5VoIM8ncdrd4Yemolj1WTO0AWb/view?usp=sharing)
 ---
 ## Enviar notificación: Correcto funcionamiento del sistema de notificación
@@ -246,5 +255,7 @@ Media
 
 ### Riesgo:
 Bajo
+
+![ESC 5](https://github.com/user-attachments/assets/2e47107c-ea51-4bd7-b52c-86d9d2c2f6c6)
 
 * [Enviar notificación: Correcto funcionamiento del sistema de notificación](https://drive.google.com/file/d/1xeJTyQlezZ6TF5h6CVGzmhROVfFpB-zB/view?usp=sharing)
