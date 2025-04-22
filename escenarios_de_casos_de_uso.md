@@ -47,7 +47,7 @@ Media
 ### Riesgo:
 Bajo
 
-* [Registrar paciente Registro exitoso de nuevo paciente](https://drive.google.com/file/d/1n-REjpnBQGjxBw0wlTqkmhAAZClYWyFV/view?usp=sharing)
+* [Registrar paciente: Registro exitoso de nuevo paciente](https://drive.google.com/file/d/1n-REjpnBQGjxBw0wlTqkmhAAZClYWyFV/view?usp=sharing)
 ---
 ## Agendar turnos: Turno agendado exitosamente
 
@@ -149,3 +149,102 @@ Bajo
 
 * [Consultar turnos: Correcta consulta de turnos](https://drive.google.com/file/d/1vtU10rtQjH3yAkoneho9cRf5hPVfbuuB/view?usp=sharing)
 ---
+## Cancelar turnos: Turno cancelado con éxito
+
+- **Nombre del caso de uso:** Turno cancelado con éxito  
+- **ID Única:** 004  
+- **Área:** Administración  
+- **Actor(es):** Personal administrativo, Paciente, Médico  
+- **Descripción:** Permite que los actores autorizados cancelen un turno previamente agendado, registrando el motivo de la cancelación.  
+- **Activar Evento:** El usuario accede al listado de turnos y selecciona uno para cancelar.  
+- **Tipo de señal:** Externa.  
+
+### Pasos desempeñados (ruta principal):
+1. El usuario inicia sesión en el sistema.  
+2. Accede al módulo “Mis turnos”.  
+3. Aplica filtros según necesidad: fecha, estado, paciente, médico.  
+4. El sistema muestra una lista de turnos coincidentes.  
+5. Hace clic en la opción “Cancelar turno”.  
+6. EIngresa el motivo de la cancelación. 
+7. El sistema actualiza el estado del turno a “Cancelado” y registra el motivo.  
+8. Se notifica al paciente y/o médico involucrado.
+
+ ### Información para los pasos:
+- Usuario y contraseña
+- Interfaz del sistema
+- Interfaz del sistema
+- Interfaz del sistema
+- Interfaz del sistema
+- Motivos de la cancelación
+- Mensaje de confirmación
+- Notificación del sistema 
+
+### Precondiciones:
+- El turno debe existir y estar en estado pendiente o confirmado. 
+
+### Poscondiciones:
+- El turno se marca como cancelado. 
+
+### Suposiciones:
+- La notificación llega correctamente al otro actor involucrado.  
+
+### Reunir requerimientos:
+- Opción clara y accesible para cancelar turnos.  
+
+### Aspectos sobresalientes:
+- ¿Existe una política de cancelación con límite de tiempo?  
+
+### Prioridad:
+Alta  
+
+### Riesgo:
+Medio
+
+* [Cancelar turnos: Turno cancelado con éxito](https://drive.google.com/file/d/1hKlgNY5VoIM8ncdrd4Yemolj1WTO0AWb/view?usp=sharing)
+---
+## Enviar notificación: Correcto funcionamiento del sistema de notificación
+
+- **Nombre del caso de uso:** Comunicación y Alertas del Sistema				  
+- **ID Única:** 005  
+- **Área:** Comunicación del Sistema  
+- **Actor(es):** Sistema (automático), Personal administrativo				  
+- **Descripción:** Este caso de uso permite que el sistema, de forma automática o por acción del personal, envíe notificaciones a pacientes y médicos ante eventos relevantes como confirmaciones, recordatorios o          cancelaciones de turnos.  
+- **Activar Evento:** Se confirma, modifica o cancela un turno, o se produce un evento programado para enviar recordatorios.				  
+- **Tipo de señal:** Temporal.  
+
+### Pasos desempeñados (ruta principal):
+1. Se registra un evento relevante (nuevo turno, cancelación, recordatorio).		  
+2. El sistema verifica el tipo de evento y destinatarios.		  
+3. Se genera el contenido del mensaje (fecha, hora, tipo de turno, médico, etc.).		  
+4. El sistema elige el canal de notificación (email, SMS, notificación en app).		  
+5. 5. Se envía la notificación.
+  
+ ### Información para los pasos:
+- Sucede un evento relevante		
+- Sucede un evento relevante		
+- Información del mensaje		
+- Información de contacto		
+- Mensaje de notificación 
+
+### Precondiciones:
+- Existen eventos configurados para generar notificaciones.				 
+
+### Poscondiciones:
+- El destinatario recibe la notificación.				  
+
+### Suposiciones:
+- Los datos de contacto son correctos.				  
+
+### Reunir requerimientos:
+- Configuración de plantillas de mensajes.				 
+
+### Aspectos sobresalientes:
+- ¿Qué pasa si el envío falla? ¿Hay reintentos?				  
+
+### Prioridad:
+Media  
+
+### Riesgo:
+Bajo
+
+* [Enviar notificación: Correcto funcionamiento del sistema de notificación](https://drive.google.com/file/d/1xeJTyQlezZ6TF5h6CVGzmhROVfFpB-zB/view?usp=sharing)
