@@ -9,7 +9,7 @@
 * [Diagrama de Casos de Uso 2 Agendar turnos](https://drive.google.com/file/d/1AvGW--aC7MIbtd4DIqvxPF7TrrytYZkd/view?usp=sharing)
 
 - ### Consultar turnos: Correcta consulta de turnos
-  El sistema muestra los turnos agendados y en caso de haberlos muestra un aviso.  
+  El sistema muestra los turnos agendados y en caso de no haberlos muestra un aviso.  
   ![Diagrama de Casos de Uso 3 Consultar turnos](https://github.com/user-attachments/assets/a5d248be-dce0-4857-8396-14cc2eb311d2)
 * [Diagrama de Casos de Uso 3 Consultar turnos](https://drive.google.com/file/d/1wOk22CSdgNHSmZXv6lep5eIeoQQdsMiI/view?usp=sharing)
 
