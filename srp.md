@@ -14,10 +14,10 @@ Al aplicar este principio:
 Antes de aplicar el principio de Responsabilidad Única, el sistema agrupaba múltiples tareas dentro de una misma clase, como por ejemplo una clase Turno que no solo almacenaba información sobre el turno, sino que también se encargaba de verificar disponibilidad, enviar notificaciones, validar horarios y registrar historial. Este enfoque hacía que cualquier pequeño cambio en una funcionalidad (por ejemplo, cambiar cómo se envía una notificación) afectara todo el sistema, generando errores inesperados y dificultando el mantenimiento.
 
 Con SRP, se decide dividir las responsabilidades:
-- La clase *Turno* se encarga exclusivamente de almacenar la información del turno.
-- La verificación de disponibilidad se delega a la clase *Agenda*.
-- Las notificaciones las gestiona una clase *Notificador*.
-- El historial lo maneja la clase *HistorialPaciente*.
+- La clase *Turno* se encarga de almacenar la información del turno.
+- La confirmación del turno se delega a la clase *confirmaciónTurno*.
+- Las revisiones del turno agendado las gestiona una clase *visualizador*.
+- Las modificaciones lo maneja la clase *modificarTurno*.
 
 Ejemplo del mundo real:
 Imaginando un recepcionista en un centro médico.
