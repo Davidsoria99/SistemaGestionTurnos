@@ -8,7 +8,7 @@
 - **Activar Evento:** El personal administrativo accede al módulo de pacientes y selecciona “Registrar nuevo”.  
 - **Tipo de señal:** Externa.  
 
-### Pasos desempeñados (ruta principal):
+### Pasos desempeñados:
 1. El paciente o personal administrativo accede al sistema.  
 2. Selecciona el módulo “Pacientes”.  
 3. Hace clic en “Registrar nuevo paciente”.  
@@ -59,7 +59,7 @@ Bajo
 - **Activar Evento:** El usuario accede al módulo de turnos y selecciona “Mis turnos”.  
 - **Tipo de señal:** Externa.  
 
-### Pasos desempeñados (ruta principal):
+### Pasos desempeñados:
 1. El usuario inicia sesión en el sistema.  
 2. Accede al módulo “Mis turnos”.  
 3. Selecciona al paciente (si es administrativo) o se autoidentifica (si es paciente).  
@@ -112,7 +112,7 @@ Medio
 - **Activar Evento:** El actor accede al módulo de turnos y elige la opción de consulta.  
 - **Tipo de señal:** Externa.  
 
-### Pasos desempeñados (ruta principal):
+### Pasos desempeñados:
 1. El usuario inicia sesión en el sistema.  
 2. Accede al módulo “Mis turnos”.  
 3. Aplica filtros según necesidad: fecha, estado, paciente, médico.  
@@ -159,7 +159,7 @@ Bajo
 - **Activar Evento:** El usuario accede al listado de turnos y selecciona uno para cancelar.  
 - **Tipo de señal:** Externa.  
 
-### Pasos desempeñados (ruta principal):
+### Pasos desempeñados:
 1. El usuario inicia sesión en el sistema.  
 2. Accede al módulo “Mis turnos”.  
 3. Aplica filtros según necesidad: fecha, estado, paciente, médico.  
@@ -212,7 +212,7 @@ Medio
 - **Activar Evento:** Se confirma, modifica o cancela un turno, o se produce un evento programado para enviar recordatorios.				  
 - **Tipo de señal:** Temporal.  
 
-### Pasos desempeñados (ruta principal):
+### Pasos desempeñados:
 1. Se registra un evento relevante (nuevo turno, cancelación, recordatorio).		  
 2. El sistema verifica el tipo de evento y destinatarios.		  
 3. Se genera el contenido del mensaje (fecha, hora, tipo de turno, médico, etc.).		  
