@@ -16,3 +16,14 @@ Con SRP, se decide dividir las responsabilidades:
 - La verificación de disponibilidad se delega a la clase *Agenda*.
 - Las notificaciones las gestiona una clase *Notificador*.
 - El historial lo maneja la clase *HistorialPaciente*.
+
+Ejemplo del mundo real:
+Imaginemos un recepcionista en un centro médico. Si esa persona tuviera que:
+- Cargar los datos del paciente
+- Confirmar turnos
+- Hacer llamadas de aviso
+- Actualizar historiales clínicos
+- Y además revisar la disponibilidad de los médicos
+  
+Probablemente cometería errores, se saturaría y las tareas no se harían bien. En cambio, si repartiera tareas con por ejemplo un/a secretario/a, el sistema es más eficiente y confiable.
+Del mismo modo, en el sistema digital, cada clase debe tener una única tarea bien definida.
