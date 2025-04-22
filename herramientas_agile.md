@@ -1,1 +1,1 @@
-- [Tarjetas CRC](tarjetas_CRC)
+- [Tarjetas CRC](tarjetas_CRC.md)
