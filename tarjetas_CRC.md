@@ -14,4 +14,24 @@ Las tarjetas CRC (Clase, Responsabilidad, Colaboración) es una herramienta util
 
 - **Pensamiento del objeto:** Atiendo a los pacientes en los horarios definidos. Estoy disponible según mi especialidad. Requiero ver mis turnos agendados y actualizar mis horarios si es necesario. Mis datos de contacto pueden cambiar.
 
-- **Propiedad:** nombre, apellido, fechaNacimiento, DNI, especialidad, matricula, horarioAtencion, telefono, email.
+- **Propiedad:** nombre, apellido, fechaNacimiento, DNI, especialidad, matrícula, horarioAtención, teléfono, email.
+
+ ![CRC1](https://github.com/user-attachments/assets/c66694b3-a4d1-48c9-8545-c74a4ac54a7d)
+ ---
+ - ### Tarjeta CRC: Agenda
+- **Nombre de la Clase:** Agenda
+
+- **Superclase:** (Ninguna)
+
+- **Subclase:** (Ninguna)
+
+- **Responsabilidades:** Registrar nuevos turnos en la agenda, Consultar disponibilidad de horarios, Actualizar el estado de un turno (pendiente, confirmado, cancelado).
+
+- **Colaboradores:** Turno, Médico, Paciente, Recepcionista.
+
+- **Pensamiento del objeto:** Registro todos los turnos asignados con fecha, hora y estado. Coordino los encuentros entre médicos y pacientes. Permito consultar la disponibilidad y actualizar la planificación según cancelaciones o nuevos turnos.
+
+- **Propiedad:** listaTurnos, fecha, hora, estado, motivo, observaciones.
+
+![CRC2](https://github.com/user-attachments/assets/638f9b5b-61ad-4c6c-864c-6b5d75d8672b)
+---
