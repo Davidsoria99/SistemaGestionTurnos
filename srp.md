@@ -27,6 +27,6 @@ Si esa persona tuviera que:
 - Actualizar historiales clínicos
 - Y además revisar la disponibilidad de los médicos
 
-Probablemente cometería errores, se saturaría y las tareas no se harían bien. En cambio, si repartiera tareas con por ejemplo un/a secretario/a, el sistema es más eficiente y confiable.
+  Probablemente cometería errores, se saturaría y las tareas no se harían bien. En cambio, si repartiera tareas con por ejemplo un/a secretario/a, el sistema es más eficiente y confiable.
 Del mismo modo, en el sistema digital, cada clase debe tener una única tarea bien definida.
 ---
