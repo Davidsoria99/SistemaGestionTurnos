@@ -46,6 +46,5 @@ Media
 
 ### Riesgo:
 Bajo
-
-![Registrar paciente: Registro exitoso de nuevo paciente](https://drive.google.com/file/d/1n-REjpnBQGjxBw0wlTqkmhAAZClYWyFV/view?usp=sharing)
+![Registrar paciente Registro exitoso de nuevo paciente](https://github.com/user-attachments/assets/a28ec5a1-1143-459a-96ed-dccbdd53057d)
 ---
