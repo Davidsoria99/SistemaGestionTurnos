@@ -10,8 +10,8 @@ Las tarjetas CRC (Clase, Responsabilidad, Colaboración) es una herramienta util
 
 - **Responsabilidades:** Atender turnos asignados, Consultar su agenda de turnos, Registrar observaciones de las consultas, Actualizar sus datos de contacto y horarios.
 
-- **Pensamiento del objeto:** Atiendo a los pacientes en los horarios definidos. Estoy disponible según mi especialidad. Requiero ver mis turnos agendados y actualizar mis horarios si es necesario. Mis datos de contacto pueden cambiar.
-
 - **Colaboradores:** Turno, Paciente, Agenda, Recepcionista.
+
+- **Pensamiento del objeto:** Atiendo a los pacientes en los horarios definidos. Estoy disponible según mi especialidad. Requiero ver mis turnos agendados y actualizar mis horarios si es necesario. Mis datos de contacto pueden cambiar.
 
 - **Propiedad:** nombre, apellido, fechaNacimiento, DNI, especialidad, matricula, horarioAtencion, telefono, email.
