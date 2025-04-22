@@ -18,7 +18,8 @@ Con SRP, se decide dividir las responsabilidades:
 - El historial lo maneja la clase *HistorialPaciente*.
 
 Ejemplo del mundo real:
-Imaginando un recepcionista en un centro médico. Si esa persona tuviera que:
+Imaginando un recepcionista en un centro médico. 
+Si esa persona tuviera que:
 - Cargar los datos del paciente
 - Confirmar turnos
 - Hacer llamadas de aviso
