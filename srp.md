@@ -28,5 +28,5 @@ Si esa persona tuviera que:
 - Y además revisar la disponibilidad de los médicos
 
   Probablemente cometería errores, se saturaría y las tareas no se harían bien. En cambio, si repartiera tareas con por ejemplo un/a secretario/a, el sistema es más eficiente y confiable.
-Del mismo modo, en el sistema digital, cada clase debe tener una única tarea bien definida.
+  Del mismo modo, en el sistema digital, lo mejor seria generar clases especificas para que en cada cambio notener que modificar la clase Recepcionista.
 ---
