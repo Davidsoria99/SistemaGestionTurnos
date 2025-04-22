@@ -9,4 +9,10 @@ Al aplicar este principio:
 - El mantenimiento del sistema se vuelve más sencillo y menos propenso a errores.
 ---
 ## Motivación
+Antes de aplicar el principio de Responsabilidad Única, el sistema agrupaba múltiples tareas dentro de una misma clase, como por ejemplo una clase Turno que no solo almacenaba información sobre el turno, sino que también se encargaba de verificar disponibilidad, enviar notificaciones, validar horarios y registrar historial. Este enfoque hacía que cualquier pequeño cambio en una funcionalidad (por ejemplo, cambiar cómo se envía una notificación) afectara todo el sistema, generando errores inesperados y dificultando el mantenimiento.
 
+Con SRP, se decide dividir las responsabilidades:
+- La clase Turno se encarga exclusivamente de almacenar la información del turno.
+- La verificación de disponibilidad se delega a la clase Agenda.
+- Las notificaciones las gestiona una clase Notificador.
+- El historial lo maneja la clase HistorialPaciente.
