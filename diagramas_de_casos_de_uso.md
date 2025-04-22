@@ -20,5 +20,5 @@
 
 - ### Enviar notificación: Correcto funcionamiento del sistema de notificación
   El sistema envía una notificación automática cuando se agenda, cancela o debe recordar un turno agendado.
-  ![Diagrama de Casos de Uso 5 Enviar notificación](https://github.com/user-attachments/assets/3549f965-f220-45a6-8964-bc37d690f176)
-* [Diagrama de Casos de Uso 5 Enviar notificación](https://drive.google.com/file/d/1ETQJat7uwFQJO-Te6XDFy66EiYQjjCru/view?usp=sharing)
+  ![Diagrama de Casos de Uso 5 Enviar notificación](https://github.com/user-attachments/assets/cacd79b5-3cc6-4ca7-aa51-8e280da93a53)
+* [Diagrama de Casos de Uso 5 Enviar notificación](https://drive.google.com/file/d/1B5AIxk6J4TmXs4dD7gzUQZ0ycKqgA38_/view?usp=sharing)
