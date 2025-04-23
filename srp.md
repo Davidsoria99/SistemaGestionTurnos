@@ -35,6 +35,6 @@ Del mismo modo, en el sistema digital, lo mejor seria generar clases especificas
 
 ---
 
-## Estructura de Cases
+## Estructura de Clases
 ![SRP](https://github.com/user-attachments/assets/f286decc-289b-4be4-9a18-d7c9c156479d)
 * [Principio de Responsabilidad Única (SRP)](https://drive.google.com/file/d/1mccb4xlTCW1Hse7ammwBxNwdc2Npk2Jc/view?usp=sharing)
