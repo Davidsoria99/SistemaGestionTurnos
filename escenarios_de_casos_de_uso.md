@@ -1,3 +1,4 @@
+# Escenarios de Casos de Uso
 ## Registrar paciente: Registro exitoso de nuevo paciente
 
 - **Nombre del caso de uso:** Registro exitoso de nuevo paciente  
