@@ -1,3 +1,4 @@
+# Diagrams de caso de uso
 - ## Caso de uso 1 - Registrar paciente 
   Caso de registro exitoso de un nuevo pacinete
   ![Diagrama de Casos de Uso 1Registrar paciente](https://github.com/user-attachments/assets/b0611f44-15be-4371-9009-c5fca3b2a486)
