@@ -11,8 +11,8 @@
 ---
 - ## Caso de uso 3 - Consultar turnos
   El sistema muestra los turnos agendados y en caso de no haberlos muestra un aviso.  
-  ![Diagrama de Casos de Uso 3 Consultar turnos](https://github.com/user-attachments/assets/a5d248be-dce0-4857-8396-14cc2eb311d2)
-* [Diagrama de Casos de Uso 3 Consultar turnos](https://drive.google.com/file/d/1wOk22CSdgNHSmZXv6lep5eIeoQQdsMiI/view?usp=sharing)
+  ![Diagrama de Casos de Uso 3 Consultar turnos](https://github.com/user-attachments/assets/15e9acb2-1662-4394-b26c-5bfaddd973c6)
+* [Diagrama de Casos de Uso 3 Consultar turnos](https://drive.google.com/file/d/1OeQ2RvpxJomdZ89rnFNlMkAJdMDF8omE/view?usp=sharing)
 ---
 - ## Caso de uso 4 - Cancelar turnos
   Se cancela un turno previamente asignado.
