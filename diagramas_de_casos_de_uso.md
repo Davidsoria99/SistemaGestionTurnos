@@ -16,8 +16,8 @@
 ---
 - ## Caso de uso 4 - Cancelar turnos
   Se cancela un turno previamente asignado.
-  ![Diagrama de Casos de Uso 4 Cancelar turnos](https://github.com/user-attachments/assets/d66f245b-26cf-4011-bbed-949f4568d2f4)
-* [Diagrama de Casos de Uso 4 Cancelar turnos](https://drive.google.com/file/d/17d56LUaCOXTncLXwelKZdyl_qOWRtNf5/view?usp=sharing)
+ ![Diagrama de Casos de Uso 4 Cancelar turnos](https://github.com/user-attachments/assets/4034db0e-f412-45de-9e06-738f82898c23)
+* [Diagrama de Casos de Uso 4 Cancelar turnos](https://drive.google.com/file/d/1ftXMsL8dyNV4T6_2FJ_ydyylBqNP7dXm/view?usp=sharing)
 ---
 - ## Caso de uso 5 - Enviar notificación
   El sistema envía una notificación automática cuando se agenda, cancela o debe recordar un turno agendado.
