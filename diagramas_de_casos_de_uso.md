@@ -16,5 +16,5 @@
   * [Diagrama de Casos de Uso 4 Cancelar turnos](https://drive.google.com/file/d/1ftXMsL8dyNV4T6_2FJ_ydyylBqNP7dXm/view?usp=sharing)
 ---
 - ## Caso de uso 5 - Enviar notificación
-  El sistema envía una notificación automática cuando se agenda, cancela o debe recordar un turno agendado.
+  El sistema envía una notificación automática cuando se agenda, cancela o se crea un nuevo turno.
  * [Diagrama de Casos de Uso 5 Enviar notificación](https://drive.google.com/file/d/1B8JiKaXkBu30zBWOwrbkfzh2FumkWVPj/view?usp=sharing)
