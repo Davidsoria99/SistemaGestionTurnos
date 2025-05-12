@@ -20,15 +20,16 @@ Aplicar ISP permite definir interfaces más pequeñas y específicas como:
 - **IMedico:** ver agenda, registrar observaciones de consulta.
 - **IRecepcionista:** agendar turnos, cancelar turnos, registrar nuevos pacientes.
 
-Ejemplo del mundo real: Imaginemos una máquina multifunción en una oficina que imprime, escanea, y envía faxes.
-Suponiendo que todos los dispositivos conectados deben implementar una interfaz **IMultifuncion** con los métodos **imprimir()**, **escanear()**, y **enviarFax()**.
+Ejemplo del mundo real: Supongamos que tenemos una interfaz *IUsuarioSistema* que incluye métodos como *registrarPaciente()*, *cancelarTurno()*, *verHistorialMedico()*, *crearAgendaMedica()* y *modificarEspecialidades()*.
+Si tanto el Paciente como el Recepcionista implementan esa interfaz completa, estarían obligados a implementar métodos que no les corresponden.
 
-Una impresora básica de escritorio solo imprime, pero por implementar esa interfaz también tendría que incluir métodos para escanear y enviar fax, aunque nunca los va a usar. Esto obliga a escribir código innecesario o lanzar excepciones como “Función no soportada”, lo cual puede provocar errores en tiempo de ejecución.
+La solucón aplicando ISP seria definir interfaces más pequeñas y especificas:
 
-La solución con ISP:
-- **IImpresora:** con el método **imprimir()**.
-- **IEscaner:** con el método **escanear()**.
-- **IFax:** con el método **enviarFax()**.
+IPaciente con métodos como solicitarTurno(), cancelarTurno(), verHistorial()
+
+IRecepcionista con métodos como registrarPaciente(), crearTurno(), modificarDatos()
+
+Así, cada clase solo implementa lo que realmente necesita.
 
 ---
 
