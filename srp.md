@@ -1,25 +1,36 @@
 # Principio de Responsabilidad Única (SRP)
 Proposito y Tipo del Principio SOLID: Este principio establece que una clase debe tener una única razón para cambiar, es decir, debe encargarse de una única responsabilidad dentro del sistema.
-
-En el caso del sistema de gestión de turnos, este principio permite separar claramente las funcionalidades: registrar pacientes, asignar turnos, enviar notificaciones, o gestionar historiales, en clases independientes. Esto evita que una sola clase controle múltiples procesos a la vez, lo cual genera acoplamiento innecesario, errores frecuentes y un diseño difícil de mantener.
-
-Al aplicar este principio:
-- El código es más claro y más fácil de testear.
-- Cada clase se enfoca en hacer bien una sola cosa.
-- El mantenimiento del sistema se vuelve más sencillo y menos propenso a errores.
   
 ---
 
 ## Motivación
-Antes de aplicar el principio de Responsabilidad Única, el sistema agrupaba múltiples tareas dentro de una misma clase, como por ejemplo una clase Turno que no solo almacenaba información sobre el turno, sino que también se encargaba de verificar disponibilidad, enviar notificaciones, validar horarios y registrar historial. Este enfoque hacía que cualquier pequeño cambio en una funcionalidad (por ejemplo, cambiar cómo se envía una notificación) afectara todo el sistema, generando errores inesperados y dificultando el mantenimiento.
+En este sistema, SRP se aplica dividiendo las responsabilidades en clases específicas, cada una centrada en una funcionalidad:
 
-Con SRP, se decide dividir las responsabilidades:
-- La clase **Turno** se encarga de almacenar la información del turno.
-- La confirmación del turno se delega a la clase **confirmaciónTurno**.
-- Las revisiones del turno agendado las gestiona una clase **visualizador**.
-- Las modificaciones lo maneja la clase **modificarTurno**.
+La clase `Paciente` se encarga exclusivamente de solicitar y cancelar turnos, así como de consultar su historial.
 
-Ejemplo del mundo real:
+La clase `Recepcionista` tiene la responsabilidad de agendar turnos, modificarlos y registrar nuevos pacientes.
+
+La clase `Médico` gestiona únicamente su agenda, registra observaciones y modifica sus horarios de atención.
+
+La clase `GestorDeTurnos` centraliza la lógica de creación, modificación y confirmación de turnos. Esto evita que Paciente o Recepcionista tengan que manejar la lógica directamente.
+
+La clase `Historial` se responsabiliza de almacenar y mostrar el historial clínico del paciente, permitiendo agregar nuevas entradas de consulta.
+
+Este diseño asegura que cada clase tenga una única razón para cambiar, según su rol específico en el sistema. Por ejemplo, si cambia la manera en la que se modifican turnos, solo debería modificarse `GestorDeTurnos`, sin afectar ni al `Médico` ni al `Paciente`.
+
+Beneficios obtenidos al aplicar SRP:
+
+- Claridad y organización del código.
+
+- Facilidad para realizar cambios o mejoras sin romper otras funcionalidades.
+
+- Facilidad para testear unidades individuales.
+
+- Separación de lógica de dominio en componentes reutilizables
+
+---
+
+**Ejemplo del mundo real**:
 Imaginando un recepcionista en un centro médico.
 
 Si esa persona tuviera que:
