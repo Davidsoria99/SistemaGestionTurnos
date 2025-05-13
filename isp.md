@@ -1,14 +1,13 @@
 # Principio de Segregación de Interfaces (ISP)
 Propósito y Tipo del Principio SOLID: Este principio establece que una clase no debe verse obligada a depender de interfaces que no utiliza. Es decir, cada interfaz debe estar enfocada en un conjunto específico y coherente de funcionalidades.
 
-En el sistema de gestión de turnos, este principio ayuda a evitar que clases como **Paciente**, **Médico** o **Recepcionista** implementen métodos que no les son relevantes. Por ejemplo, no tendría sentido que un **Paciente** tenga que implementar métodos como **crearTurnoParaOtro** o **verAgendaCompleta**, que sí corresponden a un **Recepcionista**.
+En este sistema, apliqué este principio al dividir las operaciones relacionadas con los turnos en interfaces pequeñas y específicas. Por ejemplo, en lugar de tener una interfaz grande con métodos como `verTurno()`, `confirmarTurno()` y `reprogramarTurno()` agrupados, los separé en:
 
-Al aplicar este principio:
-- Se crean interfaces específicas para cada rol (como **IConsultaTurnos**, **IGestionAgenda**, **IActualizaDatos**, etc.).
-- Las clases solo implementan las interfaces necesarias según su responsabilidad.
-- Se reduce el acoplamiento y se facilita la extensión del sistema.
+- `visualizador` con `verTurno()`
+- `confirmaciónTurno` con `confirmarTurno()`
+- `modificarTurno` con `reprogramarTurno()`
 
-Esto hace que el código sea más limpio, intuitivo y fácil de mantener, especialmente cuando el sistema crece o cambian los requisitos.
+Estas interfaces específicas heredan de una interfaz común `ITurno`, y permiten que cada clase implemente solo lo que necesita.
 
 ---
 
