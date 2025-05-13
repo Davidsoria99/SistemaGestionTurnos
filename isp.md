@@ -24,6 +24,5 @@ En cambio, aplicando ISP, cada clase implementa solo una interfaz específica: `
 ---
 
 ## Estructura de Clases
-![ISP](https://github.com/user-attachments/assets/00860814-b977-489d-8eda-7c79741525e6)
-* [Principio de Segregación de Interfaces (ISP)](https://drive.google.com/file/d/1_j09-WbK4J3YFS2VdBCh5wqw48rvJI2O/view?usp=sharing)
-
+![ISP](https://github.com/user-attachments/assets/4c11395f-a980-4fc7-b6f8-d901f12455b2)
+* [Principio de Segregación de Interfaces (ISP)](https://drive.google.com/file/d/1D5oqWt79zy58_5Cqk_vpknMjslCsZ72K/view?usp=sharing)
