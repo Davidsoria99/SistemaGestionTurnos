@@ -36,5 +36,5 @@ Del mismo modo, en el sistema digital, lo mejor seria generar clases especificas
 ---
 
 ## Estructura de Clases
-![SRP](https://github.com/user-attachments/assets/f286decc-289b-4be4-9a18-d7c9c156479d)
-* [Principio de Responsabilidad Única (SRP)](https://drive.google.com/file/d/1mccb4xlTCW1Hse7ammwBxNwdc2Npk2Jc/view?usp=sharing)
+![SRP](https://github.com/user-attachments/assets/82942ab3-036a-4158-9a94-9db88fd62c68)
+* [Principio de Responsabilidad Única (SRP)](https://drive.google.com/file/d/1v2ScP0652p8wsaqU7-FTzxxfZl7K-8tL/view?usp=sharing)
