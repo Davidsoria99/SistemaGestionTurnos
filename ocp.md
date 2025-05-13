@@ -25,5 +25,5 @@ Gracias a la implementación de este principio, el sistema puede tener una inter
 ---
 
 ## Estructura de Clases
-![OCP](https://github.com/user-attachments/assets/141a6b00-1f60-4a21-8d9c-d7ec40177209)
-* [Principio de Abierto/Cerrado (OCP)](https://drive.google.com/file/d/1hGglA7Rqw3hrvE2vyh7IpR8Cb6cGiar1/view?usp=sharing)
+![OCP](https://github.com/user-attachments/assets/d224d5eb-5bdc-4c29-b8fa-9907b4ef51c4)
+* [Principio de Abierto/Cerrado (OCP)](https://drive.google.com/file/d/1_0aJLDYL4-a6MQ3KxyUI7gHgruP80X5U/view?usp=sharing)
