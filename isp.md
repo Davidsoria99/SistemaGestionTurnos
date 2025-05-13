@@ -5,30 +5,21 @@ Propósito y Tipo del Principio SOLID: Este principio establece que una clase no
 
 ## Motivación
 
-En este sistema, apliqué este principio al dividir las operaciones relacionadas con los turnos en interfaces pequeñas y específicas. Por ejemplo, en lugar de tener una interfaz grande con métodos como `verTurno()`, `confirmarTurno()` y `reprogramarTurno()` agrupados, los separé en:
+En el sistema de gestión de turnos, este principio se aplica separando las responsabilidades de cada actor en interfaces más pequeñas. Por ejemplo:
 
-- `visualizador` con `verTurno()`
-- `confirmaciónTurno` con `confirmarTurno()`
-- `modificarTurno` con `reprogramarTurno()`
+`IVisualizadorTurno` contiene solo el método `verTurno()` y es implementada por clases encargadas de mostrar los turnos.
 
-Estas interfaces específicas heredan de una interfaz común `ITurno`, y permiten que cada clase implemente solo lo que necesita.
+`IConfirmadorTurno` contiene solo `confirmarTurno()` y lo implementan las clases que validan o aceptan turnos.
 
-Esto permite que:
-- Un módulo que solo necesite ver turnos implemente `visualizador`, sin tener que conocer cómo confirmar o modificar turnos.
-- Una clase como `Agenda` implemente la interfaz `ITurno`, pero delegue según necesidad.
+`IModificadorTurno` define `reprogramarTurno()` y lo implementan las clases que permiten modificar turnos existentes.
+
+De esta forma, cada clase depende únicamente de las operaciones que realmente necesita usar.
 
 ---
 
-**Ejemplo del mundo real**: Supongamos que tenemos una interfaz `IUsuarioSistema` que incluye métodos como `registrarPaciente()`, `cancelarTurno()`, `verHistorialMedico()`, `crearAgendaMedica()` y `modificarEspecialidades()`.
-Si tanto el Paciente como el Recepcionista implementan esa interfaz completa, estarían obligados a implementar métodos que no les corresponden.
+**Ejemplo del mundo real**: Suponiendo que se define una interfaz genérica `ITurno` con métodos como `verTurno()`, `confirmarTurno()`, `reprogramarTurno()`. Si todas las clases (como `Visualizador`, `confirmaciónTurno` y `modificarTurno`) implementaran esta interfaz, estaríamos obligando a todas a tener métodos que no necesitan.
 
-La solucón aplicando ISP seria definir interfaces más pequeñas y especificas:
-
-`IPaciente` con métodos como `solicitarTurno()`, `cancelarTurno()`, `verHistorial()`
-
-`IRecepcionista` con métodos como `registrarPaciente()`, `crearTurno()`, `modificarDatos()`
-
-Así, cada clase solo implementa lo que realmente necesita.
+En cambio, aplicando ISP, cada clase implementa solo una interfaz específica: `Visualizador` implementa `IVisualizadorTurno`, `confirmaciónTurno` implementa `IConfirmadorTurno`, y así sucesivamente.
 
 ---
 
