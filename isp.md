@@ -17,7 +17,9 @@ Esto permite que:
 - Un módulo que solo necesite ver turnos implemente `visualizador`, sin tener que conocer cómo confirmar o modificar turnos.
 - Una clase como `Agenda` implemente la interfaz `ITurno`, pero delegue según necesidad.
 
-Ejemplo del mundo real: Supongamos que tenemos una interfaz *IUsuarioSistema* que incluye métodos como *registrarPaciente()*, *cancelarTurno()*, *verHistorialMedico()*, *crearAgendaMedica()* y *modificarEspecialidades()*.
+---
+
+**Ejemplo del mundo real**: Supongamos que tenemos una interfaz *IUsuarioSistema* que incluye métodos como *registrarPaciente()*, *cancelarTurno()*, *verHistorialMedico()*, *crearAgendaMedica()* y *modificarEspecialidades()*.
 Si tanto el Paciente como el Recepcionista implementan esa interfaz completa, estarían obligados a implementar métodos que no les corresponden.
 
 La solucón aplicando ISP seria definir interfaces más pequeñas y especificas:
