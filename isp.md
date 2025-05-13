@@ -1,6 +1,8 @@
 # Principio de Segregación de Interfaces (ISP)
 Propósito y Tipo del Principio SOLID: Este principio establece que una clase no debe verse obligada a depender de interfaces que no utiliza. Es decir, cada interfaz debe estar enfocada en un conjunto específico y coherente de funcionalidades.
+
 ---
+
 ## Motivación
 
 En este sistema, apliqué este principio al dividir las operaciones relacionadas con los turnos en interfaces pequeñas y específicas. Por ejemplo, en lugar de tener una interfaz grande con métodos como `verTurno()`, `confirmarTurno()` y `reprogramarTurno()` agrupados, los separé en:
