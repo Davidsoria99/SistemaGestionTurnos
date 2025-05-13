@@ -21,5 +21,5 @@ Este principio garantiza que la herencia esté bien aplicada, evita errores ines
 ---
 
 ## Estructura de Clases
-![LSP](https://github.com/user-attachments/assets/03f7f50f-b63f-4c37-9fa2-e57e2d23a97f)
-* [Principio de Sustitución de Liskov (LSP)](https://drive.google.com/file/d/1bUFniN03Ni8hjVF5q4dpDq0b7KO5og35/view?usp=sharing)
+![LSP](https://github.com/user-attachments/assets/74d8bbd9-9cd7-4ba4-852e-496687d9f437)
+* [Principio de Sustitución de Liskov (LSP)](https://drive.google.com/file/d/1tVTnHCBgWT40UQ6Rc8PpovjIBq-s7Vl2/view?usp=sharing)
