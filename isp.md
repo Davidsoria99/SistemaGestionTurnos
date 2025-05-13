@@ -1,5 +1,7 @@
 # Principio de Segregación de Interfaces (ISP)
 Propósito y Tipo del Principio SOLID: Este principio establece que una clase no debe verse obligada a depender de interfaces que no utiliza. Es decir, cada interfaz debe estar enfocada en un conjunto específico y coherente de funcionalidades.
+---
+## Motivación
 
 En este sistema, apliqué este principio al dividir las operaciones relacionadas con los turnos en interfaces pequeñas y específicas. Por ejemplo, en lugar de tener una interfaz grande con métodos como `verTurno()`, `confirmarTurno()` y `reprogramarTurno()` agrupados, los separé en:
 
@@ -9,15 +11,9 @@ En este sistema, apliqué este principio al dividir las operaciones relacionadas
 
 Estas interfaces específicas heredan de una interfaz común `ITurno`, y permiten que cada clase implemente solo lo que necesita.
 
----
-
-## Motivación
-Uno de los problemas que enfrenta el sistema actual es que distintas clases tienen que adaptarse a una estructura genérica de funcionalidades, incluso cuando muchas de esas funcionalidades no se relacionan con su propósito. Por ejemplo, si todos los usuarios (**paciente**, **médico**, **recepcionista**) implementaran una interfaz **IUsuario** con métodos como **asignarTurno()**, **cancelarTurno()**, **verHistorial()**, etc., estaríamos obligando a subclases como **Paciente** o **Médico** a implementar métodos que no les corresponden, generando confusión, código innecesario y una arquitectura rígida.
-
-Aplicar ISP permite definir interfaces más pequeñas y específicas como:
-- **IPaciente:** consultar turnos, cancelar turno, actualizar datos.
-- **IMedico:** ver agenda, registrar observaciones de consulta.
-- **IRecepcionista:** agendar turnos, cancelar turnos, registrar nuevos pacientes.
+Esto permite que:
+- Un módulo que solo necesite ver turnos implemente `visualizador`, sin tener que conocer cómo confirmar o modificar turnos.
+- Una clase como `Agenda` implemente la interfaz `ITurno`, pero delegue según necesidad.
 
 Ejemplo del mundo real: Supongamos que tenemos una interfaz *IUsuarioSistema* que incluye métodos como *registrarPaciente()*, *cancelarTurno()*, *verHistorialMedico()*, *crearAgendaMedica()* y *modificarEspecialidades()*.
 Si tanto el Paciente como el Recepcionista implementan esa interfaz completa, estarían obligados a implementar métodos que no les corresponden.
