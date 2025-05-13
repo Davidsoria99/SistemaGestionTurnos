@@ -24,9 +24,9 @@ Si tanto el Paciente como el Recepcionista implementan esa interfaz completa, es
 
 La solucón aplicando ISP seria definir interfaces más pequeñas y especificas:
 
-`IPaciente` con métodos como solicitarTurno(), cancelarTurno(), verHistorial()
+`IPaciente` con métodos como `solicitarTurno()`, `cancelarTurno()`, `verHistorial()`
 
-`IRecepcionista` con métodos como registrarPaciente(), crearTurno(), modificarDatos()
+`IRecepcionista` con métodos como `registrarPaciente()`, `crearTurno()`, `modificarDatos()`
 
 Así, cada clase solo implementa lo que realmente necesita.
 
