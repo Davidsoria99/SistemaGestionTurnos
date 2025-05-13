@@ -19,14 +19,14 @@ Esto permite que:
 
 ---
 
-**Ejemplo del mundo real**: Supongamos que tenemos una interfaz *IUsuarioSistema* que incluye métodos como *registrarPaciente()*, *cancelarTurno()*, *verHistorialMedico()*, *crearAgendaMedica()* y *modificarEspecialidades()*.
+**Ejemplo del mundo real**: Supongamos que tenemos una interfaz `IUsuarioSistema` que incluye métodos como `registrarPaciente()`, `cancelarTurno()`, `verHistorialMedico()`, `crearAgendaMedica()` y `modificarEspecialidades()`.
 Si tanto el Paciente como el Recepcionista implementan esa interfaz completa, estarían obligados a implementar métodos que no les corresponden.
 
 La solucón aplicando ISP seria definir interfaces más pequeñas y especificas:
 
-IPaciente con métodos como solicitarTurno(), cancelarTurno(), verHistorial()
+`IPaciente` con métodos como solicitarTurno(), cancelarTurno(), verHistorial()
 
-IRecepcionista con métodos como registrarPaciente(), crearTurno(), modificarDatos()
+`IRecepcionista` con métodos como registrarPaciente(), crearTurno(), modificarDatos()
 
 Así, cada clase solo implementa lo que realmente necesita.
 
