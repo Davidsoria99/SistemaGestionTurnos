@@ -27,4 +27,5 @@ Este patrón permite cambiar el algoritmo de asignación de turnos en tiempo de 
 ## Estructura de Clases:
 
 - Permite intercambiar algoritmo de asignación de turnos.
+  
 ![Strategy](https://github.com/user-attachments/assets/33e51ff0-bdc6-4ea7-a2dd-bf5ffd91a8d2)
