@@ -7,8 +7,11 @@
 especialmente:
 
 SRP: La clase asume doble responsabilidad (lógica de negocio y control de instancia).
+
 OCP: Dificulta la extensión sin modificación, ya que el cliente se acopla a una implementación concreta.
+
 DIP: Rompe la inversión de dependencias al obligar a los clientes a depender de una clase concreta en lugar de una abstracción.
+
 LSP e ISP: no tienen relación con Singleton, debido a que su aplicación depende más del diseño general de las interfaces y la herencia, no del patrón en sí.
 
 ## Motivación:
