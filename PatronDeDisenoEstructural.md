@@ -6,9 +6,13 @@
 - Este patrón generalmente armoniza bien con los principios SOLID:
 
   SRP: El Adaptador tiene una única y clara responsabilidad: la de adaptar una interfaz a otra.
+  
   OCP: Promueve el OCP porque se pueden añadir nuevos adaptadores para soportar servicios incompatibles sin necesidad de modificar el código del cliente existente. El cliente permanece "cerrado" a modificaciones.
+  
   LSP: Lo apoya, ya que el Adaptador implementa una interfaz, lo que significa que un objeto Adaptador puede sustituir a cualquier otro objeto que implemente esa misma interfaz sin alterar la lógica del cliente.
+  
   DIP: Facilita el DIP, dado que el cliente depende de una abstracción y no de los detalles concretos del servicio original.
+  
   ISP: Eñ patrón Adapter es compatible con eeste y puede ser una herramienta valiosa para lograr una mejor segregación de interfaces al permitir que los clientes interactúen con interfaces más pequeñas y relevantes.
 
 ## Motivación:
