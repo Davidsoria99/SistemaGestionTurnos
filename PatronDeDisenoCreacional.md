@@ -2,7 +2,7 @@
 
 ## Propósito y Tipo del Patrón:
 
-- El patrón `Singleton` asegura que una clase tenga una única instancia y proporciona un punto de acceso global a ella.
+- El patrón `Singleton` es un patrón de diseño creacional que tiene como propósito garantizar que una clase tenga solo una instancia y proporcionar un punto de acceso global a esa instancia. En otras palabras, restringe la instanciación de una clase a un solo objeto.
 
 ## Motivación:
   
