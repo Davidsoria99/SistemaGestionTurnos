@@ -3,7 +3,7 @@
 ## Propósito y Tipo del Patrón:
 - El patrón `Adapter` facilita que componentes con interfaces incompatibles colaboren, envolviendo una interfaz existente para que se ajuste a lo que el cliente espera.
   
-- Este patrón generalmente armoniza bien con los principios SOLID:
+- Su relación con los principios SOLID:
 
   SRP: El Adaptador tiene una única y clara responsabilidad: la de adaptar una interfaz a otra.
   
