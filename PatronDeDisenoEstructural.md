@@ -21,5 +21,5 @@ Este patrón me permite integrar sistemas de notificación externos que tienen d
 Se puede crear un adaptador para cada servicio de notificación externo, y el `ServicioNotificacion` interactuará con una interfaz unificada.
 
 ## Estructura de Clases:
-
+- Permite que ServicioNotificacion interactúe con ServicioEmailExistente a través de una interfaz común.
 ![Adapter](https://github.com/user-attachments/assets/406f0bfd-e951-4a9a-8cd6-65e76a35d60a)
