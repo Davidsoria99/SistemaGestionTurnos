@@ -5,7 +5,6 @@
 - El patrón `Singleton` es un patrón de diseño creacional que tiene como propósito garantizar que una clase tenga solo una instancia y proporcionar un punto de acceso global a esa instancia. En otras palabras, restringe la instanciación de una clase a un solo objeto.
 - Por esto suele tener ciertos conflictos con los principios SOLID, ya que al forzar una instancia única y un punto de acceso global, tiende a introducir rigidez en el diseño y acoplamiento fuerte.
 especialmente:
-
 SRP: La clase asume doble responsabilidad (lógica de negocio y control de instancia).
 
 OCP: Dificulta la extensión sin modificación, ya que el cliente se acopla a una implementación concreta.
