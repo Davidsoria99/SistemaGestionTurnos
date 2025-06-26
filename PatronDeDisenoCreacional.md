@@ -22,7 +22,7 @@ En este sistema de gestión de turnos, hay recursos que deben ser únicos a lo l
 Es ideal para controlar el acceso a recursos compartidos o servicios centrales que no deberían tener múltiples instancias. En este caso, una única instancia de una clase que gestione la conexión a la base de datos o que actúe como un "Gestor de Configuraciones" es fundamental para la eficiencia y la coherencia.
 
 ## Estructura de Clases:
-- Asegura una única instancia globalmente accesible. Controla la conexión a la DB.
+- Asegura una única instancia globalmente accesible. Controla la conexión a la BD.
 
 ![Singleton](https://github.com/user-attachments/assets/44ccd80f-b0f4-4a2b-9001-e59a9e03cfc1)
 
