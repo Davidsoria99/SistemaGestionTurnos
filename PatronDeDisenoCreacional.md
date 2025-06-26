@@ -1,4 +1,4 @@
-# Anexo - Aplicación de Patrón de Diseño estructural - Singleton
+# Anexo - Aplicación de Patrón de Diseño creacional - Singleton
 
 ## Propósito y Tipo del Patrón:
 
