@@ -18,6 +18,6 @@
 ## Motivación:
 El sistema de gestión de turnos envia notificaciones (por ejemplo, confirmaciones de turno, recordatorios, cancelaciones) a pacientes y médicos. Probablemente en una versión más avanzada del sistema se requieran diferentes canales de notificación (email, SMS, WhatsApp). Si el código actual está acoplado a un servicio de email específico, cambiar o añadir un nuevo canal implicaría modificar muchas partes del sistema.
 Este patrón me permite integrar sistemas de notificación externos que tienen diferentes APIs (interfaces) sin modificar el código cliente (el `ServicioNotificacion` del sistema). 
-Se puede crear un adaptador para cada servicio de notificación externo, y nuestro `ServicioNotificacion` interactuará con una interfaz unificada.
+Se puede crear un adaptador para cada servicio de notificación externo, y el `ServicioNotificacion` interactuará con una interfaz unificada.
 
 ## Estructura de Clases:
