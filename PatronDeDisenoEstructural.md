@@ -13,7 +13,7 @@
   
   DIP: Facilita el DIP, dado que el cliente depende de una abstracción y no de los detalles concretos del servicio original.
   
-  ISP: Eñ patrón Adapter es compatible con eeste y puede ser una herramienta valiosa para lograr una mejor segregación de interfaces al permitir que los clientes interactúen con interfaces más pequeñas y relevantes.
+  ISP: El patrón Adapter es compatible con este y puede ser una herramienta valiosa para lograr una mejor segregación de interfaces al permitir que los clientes interactúen con interfaces más pequeñas y relevantes.
 
 ## Motivación:
 El sistema de gestión de turnos envia notificaciones (por ejemplo, confirmaciones de turno, recordatorios, cancelaciones) a pacientes y médicos. Probablemente en una versión más avanzada del sistema se requieran diferentes canales de notificación (email, SMS, WhatsApp). Si el código actual está acoplado a un servicio de email específico, cambiar o añadir un nuevo canal implicaría modificar muchas partes del sistema.
