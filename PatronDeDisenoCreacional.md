@@ -3,6 +3,8 @@
 ## Propósito y Tipo del Patrón:
 
 - El patrón `Singleton` asegura que una clase tenga una única instancia y proporciona un punto de acceso global a ella.
+
+## Motivación:
   
 En este sistema de gestión de turnos, hay recursos que deben ser únicos a lo largo de toda la aplicación, como la conexión a una base de datos o un gestor de configuraciones. Si múltiples partes de la aplicación intentan conectarse o gestionar estos recursos de forma independiente, podría tener problemas de consistencia o sobrecarga de recursos. Por ejemplo, el `RepositorioTurnos` o el `RepositorioUsuario` necesitan una conexión a la base de datos. Crear múltiples conexiones por cada acceso puede causar problemas.
 
