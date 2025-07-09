@@ -51,9 +51,9 @@ POO es importante porque permite:
 
 ---
 
-### 📘 Caso de uso 1: Registrar paciente
+### 📘 Caso de uso 1: Registrar paciente: Registro exitoso de nuevo paciente
 
-- **Actor(es) involucrado(s)**: Recepcionista
+- **Actor(es) involucrado(s)**: Recepcionista, Paciente
 - **Descripción breve**: El recepcionista carga los datos de un nuevo paciente en el sistema.
 - **Flujo principal de eventos**:
   1. El recepcionista inicia sesión en el sistema.
@@ -76,7 +76,7 @@ POO es importante porque permite:
 
 ---
 
-### 📘 Caso de uso 2: Agendar turno
+### 📘 Caso de uso 2: Agendar turno: Turno agendado exitosamente
 
 - **Actor(es) involucrado(s)**: Recepcionista, Paciente
 - **Descripción breve**: Permite asignar un turno entre un paciente y un profesional.
@@ -107,9 +107,9 @@ POO es importante porque permite:
 
 ---
 
-### 📘 Caso de uso 3: Consultar turnos
+### 📘 Caso de uso 3: Consultar turnos: Correcta consulta de turnos
 
-- **Actor(es) involucrado(s)**: Recepcionista
+- **Actor(es) involucrado(s)**: Recepcionista, Paciente, Médico
 - **Descripción breve**: El sistema muestra los turnos agendados en una fecha y hora específica.
 - **Flujo principal de eventos**:
   1. El actor (recepcionista) accede al sistema con sus credenciales.
@@ -131,9 +131,9 @@ POO es importante porque permite:
 
 ---
 
-### 📘 Caso de uso 4: Cancelar turno
+### 📘 Caso de uso 4: Cancelar turno: Turno cancelado con éxito
 
-- **Actor(es) involucrado(s)**: Paciente, Recepcionista
+- **Actor(es) involucrado(s)**: Paciente, Recepcionista, Médico
 - **Descripción breve**: Se cancela un turno previamente asignado.
 - **Flujo principal de eventos**:
   1. El actor (paciente o recepcionista) inicia sesión en el sistema con sus credenciales.
@@ -154,9 +154,9 @@ POO es importante porque permite:
 
 ---
 
-### 📘 Caso de uso 5: Enviar notificación
+### 📘 Caso de uso 5: Enviar notificación: 
 
-- **Actor(es) involucrado(s)**: Sistema
+- **Actor(es) involucrado(s)**: Sistema, Recepcionista
 - **Descripción breve**: El sistema envía una notificación automática cuando se agenda o cancela un turno.
 - **Flujo principal de eventos**:
   1. El sistema detecta un evento relevante que requiere notificación (por ejemplo: confirmación de turno, recordatorio, cancelación, modificación).
