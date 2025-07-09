@@ -12,7 +12,7 @@ Aplicando el principio de Inversión de Dependencias, creamos una interfaz gener
 
 ---
 
-**Ejemplo del mundo real:** En este sistema, una funcionalidad clave es la de notificar a los pacientes sobre la confirmación de sus turnos, los recordatorios o las cancelaciones.
+**Ejemplo del mundo real**: En este sistema, una funcionalidad clave es la de notificar a los pacientes sobre la confirmación de sus turnos, los recordatorios o las cancelaciones.
 
 
 Si el sistema dependiera directamente de implementaciones de bajo nivel como 'NotificadorEmail', crearía un fuerte acoplamiento, forzando modificaciones en Sistema si el método de notificación cambiara, por ejemplo, al pasar a WhatsApp o SMS.
