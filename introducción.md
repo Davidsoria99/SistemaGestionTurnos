@@ -56,17 +56,20 @@ POO es importante porque permite:
 - **Actor(es) involucrado(s)**: Recepcionista, Paciente
 - **Descripción breve**: El recepcionista carga los datos de un nuevo paciente en el sistema.
 - **Flujo principal de eventos**:
-  1. El recepcionista inicia sesión en el sistema.
-  2. Desde el menú principal, selecciona la opción “Registrar paciente”.
-  3. El sistema muestra un formulario vacío de registro.
-  4. El recepcionista solicita al paciente sus datos personales (nombre completo, DNI, fecha de nacimiento, email, número de teléfono, dirección, etc.).
-  5. El recepcionista completa el formulario con la información proporcionada.
-  6. El sistema valida los campos obligatorios y el formato de los datos (por ejemplo, que el email tenga formato válido, que el DNI no esté duplicado).
-  7. Si hay errores en la validación, el sistema muestra mensajes indicando los campos que deben corregirse.
-  8. Una vez corregidos los errores (si los hubo), el recepcionista confirma el registro.
-  9. El sistema guarda los datos en la base de datos.
-  10. El sistema muestra un mensaje de confirmación del alta del paciente.
-  11. El sistema ofrece la opción de agendar un turno para el paciente recién registrado.
+  1. El recepcionista accede al sistema.
+  2. Ingresa usuario y contraseña.
+  3. Selecciona modulo “Pacientes”.
+  4. Ingresa a “Registrar nuevo paciente” .
+  5. Ingresa DNI del paciente.
+  6. El sistema recibe el DNI del paciente.
+  7. El sistema verifica si el usuario ya existe en la base de datos.
+  8. Si el usuario ya existe se muestra mensaje de usuario existente.
+  9. Si el usuario es nuevo semuestra el formulario de registro.
+  10. El sistema valida los datos ingresados.
+  11. Si los datos ingresados son incorrectos se extiende un mensaje de error.
+  12. En caso de ser correctos se confirma el registro.
+  13. Se guardan los datos en la base de datos.
+  14. Se genera un nuevo usuario.
 - **Precondiciones**:
 - 1. El recepcionista debe haber iniciado sesión.
   2. El paciente no debe estar registrado previamente (el sistema debería verificar duplicados por DNI).
@@ -81,22 +84,21 @@ POO es importante porque permite:
 - **Actor(es) involucrado(s)**: Recepcionista, Paciente
 - **Descripción breve**: Permite asignar un turno entre un paciente y un profesional.
 - **Flujo principal de eventos**:
-  1. El paciente solicita un turno, de forma presencial o telefónica, indicando la especialidad que necesita.
-  2. El recepcionista accede al sistema y selecciona la opción "Agendar turno".
-  3. El sistema solicita identificar al paciente. El recepcionista busca por DNI o nombre.
-  4. Si el paciente no está registrado, el sistema permite registrarlo (ver Caso de uso 1).
-  5. Una vez identificado el paciente, el sistema solicita elegir:
-      - Especialidad médica
-      - Profesional (si ya tiene uno asignado)
-      - Día y horario preferido
-  6. El sistema muestra los profesionales disponibles según la especialidad y sus horarios libres.
-  7. El recepcionista selecciona el profesional y el horario.
-  8. El sistema verifica que el turno esté disponible y que no exista superposición con otros turnos asignados.
-  9. Si todo es válido, el recepcionista confirma el turno.
-  10. El sistema registra el turno en la base de datos, relacionando paciente, médico, fecha y hora.
+  1. El recepcionista accede al sistema.
+  2. Ingresa usuario y contraseña.
+  3. Selecciona modulo “Mis turnos”.
+  4. Selecciona especialidad.
+  5. Selecciona médico.
+  6. El sistema valida las fechas y horarios disponibles.
+  7. Consulta disponibilidad al médico.
+  8. En caso de no haber disponibilidad se extiende mensaje de error.
+  9. En caso de haber disponibilidad guarda la fecha y hora como disponible.
+  10. El recepcionista selecciona fecha y horario.
   11. El sistema genera una notificación o comprobante del turno para el paciente.
-  12. El sistema puede enviar automáticamente un aviso por correo o mensaje al paciente y al médico.
-  13. El sistema muestra un mensaje de confirmación de que el turno fue asignado correctamente.    
+  12. El sistema valida que no exista superposición ni conflictos.
+  13. En caso de existir un conflicto se extiende mensaje de error.
+  14. En caso de que todo sea correcto se confirma la agenda.
+  15. Se genera mensaje de turno confirmado.    
 - **Precondiciones**:
   - El paciente debe existir en el sistema.
   - Debe existir al menos un médico disponible para la especialidad solicitada.
@@ -112,18 +114,17 @@ POO es importante porque permite:
 - **Actor(es) involucrado(s)**: Recepcionista, Paciente, Médico
 - **Descripción breve**: El sistema muestra los turnos agendados en una fecha y hora específica.
 - **Flujo principal de eventos**:
-  1. El actor (recepcionista) accede al sistema con sus credenciales.
-  2. Desde el menú principal, selecciona la opción "Mis turnos", luego "Consultar agenda".
-  3. El sistema solicita los filtros de búsqueda: profesional, fecha o rango de fechas.
-  4. El actor elige el profesional (puede ser él mismo si es médico) y la fecha deseada.
-  5. El sistema consulta la base de datos y muestra la agenda correspondiente:
-      - Horarios disponibles y ocupados
-      - Nombre del paciente asignado
-      - Especialidad del turno (si aplica)
-      - Estado del turno (activo, cancelado, finalizado)
-  6. El actor puede cambiar de fecha o profesional desde la misma vista para navegar por la agenda.
-  7. El sistema permite imprimir o exportar la agenda.
-  8. Se muestra una opción para volver al menú principal.
+  1. El recepcionista accede al sistema.
+  2. Ingresa usuario y contraseña.
+  3. Selecciona modulo “Mis turnos”.
+  4. Aplica filtro.
+  5. El sistema busca resultados dependiendo del filtro aplicado.
+  6. El sistema consulta la agenda en la base de datos.
+  7. En caso de no encontrar resultados se extiende un mensaje de error.
+  8. Si se encuentran resultados se muestra lista de turnos coincidentes.
+  9. El recepcionista selecciona ver detalles.
+  10. Se muestran los detalles del turno (fecha, hora).
+  11. El usuario observa los detalles de su turno.
 - **Precondiciones**:
   - El sistema debe contener al menos un turno agendado.
 - **Postcondiciones**:
@@ -136,15 +137,19 @@ POO es importante porque permite:
 - **Actor(es) involucrado(s)**: Paciente, Recepcionista, Médico
 - **Descripción breve**: Se cancela un turno previamente asignado.
 - **Flujo principal de eventos**:
-  1. El actor (paciente o recepcionista) inicia sesión en el sistema con sus credenciales.
-  2. Desde el menú principal, selecciona la opción "Mis turnos", luego "Cancelar turno".
-  3. El sistema muestra una lista de los turnos que tiene agendados el paciente.
-  4. El paciente selecciona el turno que desea cancelar.
-  5. El sistema muestra los detalles del turno seleccionado y solicita confirmación para cancelarlo.
-  6. El paciente o recepcionista confirma la cancelación.
-  7. El sistema actualiza el estado del turno en la base de datos a “cancelado”.
-  8. El sistema libera ese turno para que pueda ser tomado por otro paciente.
-  9. Se muestra un mensaje de confirmación de la cancelación al usuario.
+  1. El recepcionista accede al sistema.
+  2. Ingresa usuario y contraseña.
+  3. Selecciona modulo “Mis turnos”.
+  4. Aplica filtro.
+  5. El sistema busca resultados dependiendo del filtro aplicado.
+  6. El sistema consulta la agenda en la base de datos.
+  7. En caso de no exixtir resultados se extiende un mensaje de error.
+  8. Si se encuentran resultados se muestra lista de turnos coincidentes.
+  9. El recepcionista selecciona ver detalles.
+  10. Se muestran los detalles del turno (fecha, hora, médico).
+  11. Observa los detalles de su turno.
+  12. Selecciona la opción de “Cancelar turno”.
+  13. El sistema envia notificación de cancelación al médico y al paciente.
 - **Precondiciones**:
   - El paciente debe tener un turno previamente asignado.  
   - El turno debe estar vigente (no pasado).
@@ -159,16 +164,20 @@ POO es importante porque permite:
 - **Actor(es) involucrado(s)**: Sistema, Recepcionista
 - **Descripción breve**: El sistema envía una notificación automática cuando se agenda o cancela un turno.
 - **Flujo principal de eventos**:
-  1. El sistema detecta un evento relevante que requiere notificación (por ejemplo: confirmación de turno, recordatorio, cancelación, modificación).
-  2. El sistema obtiene los datos del paciente destinatario (nombre, email, tipo de turno, fecha, etc.).
-  3. Se genera automáticamente el contenido del correo según el tipo de notificación.
-  4. El sistema establece conexión con el servidor de correo configurado.
-  5. Se envía el email al destinatario.
+  1. El recepcionista accede al sistema.
+  2. Ingresa usuario y contraseña.
+  3. Selecciona modulo “Agenda”.
+  4. Aplica filtro.
+  5. El sistema busca resultados dependiendo del filtro aplicado.
   6. El sistema registra el envío en la base de datos con estado "enviado" y la fecha/hora.
-  7. Si ocurre un error en el envío, el sistema:
-      - Lo registra como "fallido"
-      - Notifica al administrador del sistema para su seguimiento.
-  8. El usuario (si corresponde) recibe confirmación del envío (en pantalla o como mensaje de estado).
+  7. El sistema consulta la agenda en la base de datos.
+  8. En caso de no encontrar resultados se extiende un mensaje de error.
+  9. En caso de encontrar resultados se muestra lista de turnos coincidentes.
+  10. El recepcionista selecciona ver detalles.
+  11. Se muestran los detalles del turno (fecha, hora, paciente, médico).
+  12. Selecciona enviar recordatorio.
+  13. El sistema envia recordatorio de notificación.
+  14. El paciente recibe notificación.
 - **Precondiciones**:
   - El paciente debe tener un email registrado.
 - **Postcondiciones**: 
