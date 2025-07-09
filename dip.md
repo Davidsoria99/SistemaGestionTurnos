@@ -14,9 +14,11 @@ Aplicando el principio de Inversión de Dependencias, creamos una interfaz gener
 
 **Ejemplo del mundo real:** En este sistema, una funcionalidad clave es la de notificar a los pacientes sobre la confirmación de sus turnos, los recordatorios o las cancelaciones.
 
+
 Si el sistema dependiera directamente de implementaciones de bajo nivel como 'NotificadorEmail', crearía un fuerte acoplamiento, forzando modificaciones en Sistema si el método de notificación cambiara, por ejemplo, al pasar a WhatsApp o SMS.
 Para evitar este problema, se aplicaria el **DIP**. Definiendo una abstracción: la interfaz 'INotificador'. Esta interfaz ayudaria para cualquier tipo de envío de notificación.
 Así, la clase 'Notificador', solo interactúa con la interfaz 'INotificador', sin preocuparse por los detalles específicos del canal de envío. Esto permite intercambiar entre 'NotificadorEmail', 'NotificadorSMS' o 'NotificadorWhatsapp' sin modificar la lógica central del Sistema o de Notificador. Simplemente modificaria la implementación deseada. Este enfoque garantiza un diseño flexible, ya que los cambios en los detalles de comunicación no afectan la lógica de negocio principal del sistema.
+
 ---
 
 ## Estructura de Clases
