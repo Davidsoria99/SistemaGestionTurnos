@@ -178,6 +178,6 @@ POO es importante porque permite:
 
 ## Boceto inicial del diseño de clases
 
-![Boceto inicial del diseño de clases](https://github.com/user-attachments/assets/3ac8c3f1-9444-438e-b695-21137fb402a4)
+![Boceto inicial del diseño de clases](https://github.com/user-attachments/assets/18f1f42e-c8fa-4fa2-96cd-c6677142bc95)
 
-🔗 [Ver diseño en línea](https://drive.google.com/file/d/1asCXQbCRQQyFl0Q29PHggZRPzdEzWC75/view?usp=sharing)
+🔗 [Ver diseño en línea](https://drive.google.com/file/d/1UOw3Kq7-UQuhZ02jkWhHSQsnGpOgHLhV/view?usp=sharing)
