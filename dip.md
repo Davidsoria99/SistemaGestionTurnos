@@ -10,7 +10,9 @@ Originalmente en el sistema de gestión de turnos los módulos de alto nivel est
 
 Aplicando el principio de Inversión de Dependencias, creamos una interfaz general llamada **INotificador**. Los módulos de alto nivel, como **Notificador**, solo dependen de esta interfaz, sin saber ni importar cómo se implementa el envío del mensaje. Así, se puede cambiar o extender el tipo de notificación sin afectar la lógica principal del sistema.
 
-Ejemplo del mundo real: Imaginando una empresa de logística que necesita enviar confirmaciones de entrega a sus clientes.
+---
+
+*Ejemplo del mundo real:* Imaginando una empresa de logística que necesita enviar confirmaciones de entrega a sus clientes.
 
 Si su sistema principal depende directamente de una clase **CorreoPostal**, cualquier cambio —como pasar a un servicio de mensajería digital— requeriría rehacer parte del sistema. Pero si el sistema principal depende de una interfaz **IMedioDeConfirmación**, puede cambiar entre CorreoPostal, Email o WhatsApp sin tocar el núcleo del programa.
 
